@@ -1,37 +1,4 @@
-## Welcome to GitHub Pages
+[GoKi](https://github.com/goki/ki) is a tree package based on the `Ki` interface implemented by the `Node` struct, supporting arbitrary directed (no loops!) structural trees and standard operations thereon, for primary use in constructing the scenegraph in the GoGi GUI framework.  It can also be used for representing file system trees, web DOM trees, or any other such structural tree, which are so commonly used to represent structured information.
 
-You can use the [editor on GitHub](https://github.com/goki/goki.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+[GoGi](https://github.com/goki/gi) is a 2D and 3D GUI framework, built on GoKi, providing a fully native Go experience, built upon widely-used and familiar standards in the web (CSS-based styling and layout, SVG-based vector graphics) and other GUIs (e.g., the Qt Widget and model-view framework).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/goki/goki.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
