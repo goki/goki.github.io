@@ -18,7 +18,13 @@ There are extensive `examples` demo applications showing and testing the GUI ele
 
 * [GoPix](https://github.com/gopix) is a picture viewing and organizing app, under development but currently usable for basic tasks.  Its primary advantage is in providing full keyboard-based usability, and a generic file-based framework, that avoids any kind of lock-in into complex databases.  For example, it creates symbolic links to create folders of selected images from the full collection of files, and it takes full advantage of the `exif` metadata to update and organize picture files.  Image files can be systematically renamed by their date taken to avoid having a 100's of files all named `Image-1.jpg`.
 
-All of these examples provide a decent codebase to see how to accomplish various things you might want to do.
+* [Grid](https://github.com/goki/grid) is an interactive drawing program based on SVG vector-based format, natively supported by GoGi.  The goal is basically an Inkscape that actually works well on the Mac (and the other supported platforms).  Currently work in progress.
+
+* [Glide](https://github.com/gok/glide) will be a lightweight internet display engine (HTML renderer and web browser), using the GoGi scenegraph as the DOM.  Because GoGi uses CSS natively and already supports HTML-based text formatting, basic functionality should be relatively easy.  Only an idea and a name at this point.
+
+* [Grail](https://github.com/goki/grail) will be an email app, using Glide for HTML rendering of messages, featuring full keyboard-based navigation (emacs-style of course) and markup-based message formatting.  Only an idea and a name at this point.
+
+These examples provide a decent codebase to see how to accomplish various things you might want to do.
 
 As of now, GoGi supports full functionality across the three major desktop platforms: Mac, Linux and Windows, but it should be portable to mobile platforms and wasm with a bit of work by an interested party.  The vast majority of the system works directly on the standard Go `image.Image` interface, and it doesn't use any platform-specific widgets, so it is generally highly portable.
 
