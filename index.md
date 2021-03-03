@@ -18,7 +18,7 @@ There are extensive `examples` demo applications showing and testing the GUI ele
 
 * [GoPix](https://github.com/gopix) is a picture viewing and organizing app, under development but currently usable for basic tasks.  Its primary advantage is in providing full keyboard-based usability, and a generic file-based framework, that avoids any kind of lock-in into complex databases.  For example, it creates symbolic links to create folders of selected images from the full collection of files, and it takes full advantage of the `exif` metadata to update and organize picture files.  Image files can be systematically renamed by their date taken to avoid having a 100's of files all named `Image-1.jpg`.
 
-* [Grid](https://github.com/goki/grid) is an interactive drawing program based on SVG vector-based format, natively supported by GoGi.  The goal is basically an Inkscape that actually works well on the Mac (and the other supported platforms).  Currently work in progress.
+* [Grid](https://github.com/goki/grid) is an interactive drawing program based on SVG vector-based format, like Inkscape.  Inkscape has never worked very well on Mac, and is currently almost unusable due to extremely slow GUI rendering.  Initial basic functionality is in place, with more complete features to be implemented gradually.
 
 * [Glide](https://github.com/gok/glide) will be a lightweight internet display engine (HTML renderer and web browser), using the GoGi scenegraph as the DOM.  Because GoGi uses CSS natively and already supports HTML-based text formatting, basic functionality should be relatively easy.  Only an idea and a name at this point.
 
