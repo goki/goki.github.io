@@ -1,0 +1,35 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.site-header {
+    color: #ffff;
+    background-color: #a067ab;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/gogi_goki_banner.png");
+    background-size: contain;
+    // filter: brightness(70%);
+    // background-size: 100% 100%;
+    // height: 30vh;
+}
+
+.site-title,
+.site-title:visited {
+    color: white;
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.site-nav .page-link {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .site-nav .page-link {
+        color: black;
+    }
+}
+
+code {
+    user-select: all;
+}
