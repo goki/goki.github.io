@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Install
-permalink: /install/
+permalink: /gi/install
 ---
 
 1. Install the platform-specific dependencies for your platform:

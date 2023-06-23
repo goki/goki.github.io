@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting Started
-permalink: /gettingStarted/
+permalink: /gi/gettingstarted
 ---
 
 _Note: this page assumes that you have already installed GoGi by completing the steps in [Install](/install)_

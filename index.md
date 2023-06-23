@@ -1,45 +1,51 @@
 ---
 layout: home
 title: GoKi
+permalink: /
 ---
 
-[GoKi](https://github.com/goki/ki) is a tree package based on the `Ki` interface implemented by the `Node` struct, supporting arbitrary directed (no loops!) structural trees and standard operations thereon, for primary use in constructing the scenegraph in the GoGi GUI framework.  It can also be used for representing file system trees, web DOM trees, or any other such structural tree, which are so commonly used to represent structured information.
+GoKi is an open-source project that provides a set of frameworks for constructing cross-platform GUIs and other useful tools in pure Go using full-strength tree structures. The name GoKi is derived from the word tree in Japanese (木), which is pronounced Ki (き). 
 
 
-## GoGi
+## Ki
+The core package of GoKi is [Ki](/ki), which provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.
 
-[GoGi](https://github.com/goki/gi) is a 2D and 3D GUI framework, built on GoKi, providing a fully native Go experience, built upon widely-used and familiar standards in the web (CSS-based styling and layout, SVG-based vector graphics) and other GUIs (e.g., the Qt Widget and model-view framework).
+## Gi
+[Gi](/gi) is a pure Go 2D and 3D GUI framework, built on [Ki](/ki) and widely used standards in the web, like CSS for styling and SVG for vector graphics.
 
-GoGi has feature parity (or better) compared to the industry standard Qt framework in most respects, including support for things like tooltips, fully-formatted HTML text with hypertext links, syntax-highlighted text display and full-featured editing, custom keymaps, color preferences (including light and dark mode), etc.  The model-view framework uses reflection to render complex structured GUI elements like edit dialogs, tables, lists, choosers, etc based on standard Go structured types (`struct`, slices, `map`), including a `TreeView` based on `Ki` trees, with a full-featured `FileTree` and `FileTreeView` for file system trees.
+## Gide
+[Gide](/gide) is an IDE and IDE framework built using [Gi](/gi) and [Pi](/pi). It has standard editor features like syntax highlighting, completion, and version control built-in.
 
-The 3D framework supports a standard scenegraph-based framework that can import standard Collada `.obj` files, and custom dynamic 3D display elements.  This 3D scenegraph can be embedded anywhere in the 2D scenegraph, and another 2D scenegraph can also be embedded within that 3D scenegraph, allowing nicely rendered, complex 2D GUI controls to be embedded within 3D scenes.
+## Pi
+[Pi](/pi) is an interactive parsing library that uses a simple and robust form of lexing and parsing based on top-down recursive descent.
 
-The https://github.com/goki github site has the repositories, full README and wiki docs, etc.
+## vGPU
 
-See the [GoGi Wiki](https://github.com/goki/gi/wiki) for more detailed documentation on the GoGi GUI.
+[vGPU](/vgpu) is a Vulkan-based framework for both Graphics and Compute Engine use of GPU hardware in Go.
 
-There are extensive `examples` demo applications showing and testing the GUI elements included in the GoGi repository, and the following major applications:
+## GoSL
 
-* The [emergent](https://EmerSim.org) neural network simulation system ([on github](https://github.com/emer/emergent)) uses 2D and 3D GoGi GUI elements to provide interactive control and visualization of complex neural models of the brain.  These models can be run directly in Go, or via Python, and GoGi itself can be fully accessed directly through Python using the [GoPy](https://github.com/go-python/gopy) tool.
+[GoSL](/gosl) implements Go as a shader language for GPU compute shaders by converting Go code to HLSL, and then using the glslc compiler to compile into an `.spv` SPIR-V file that can be loaded into a vulkan compute shader.
 
-* [Gide](https://github.com/goki/gide) is a Go-based IDE (interactive development environment), which serves as the daily testing platform for GoGi, and features a strongly *emacs*-inspired design and functionality.  It is not fancy, but everything can be accessed by keyboard shortcuts so it is very efficient once learned (and emacs users should be fluent right away).  It has full knowledge of the Go language (via the [GoPi interactive parser](https://github.com/goki/pi)) and supports completion, lookup, interactive debugging via the [delve](https://github.com/go-delve/delve) debugger, etc.
+## Grid
+Grid is a Go SVG vector drawing program, built using Gi and based on Inkscape.
 
-* [GoPix](https://github.com/gopix) is a picture viewing and organizing app, under development but currently usable for basic tasks.  Its primary advantage is in providing full keyboard-based usability, and a generic file-based framework, that avoids any kind of lock-in into complex databases.  For example, it creates symbolic links to create folders of selected images from the full collection of files, and it takes full advantage of the `exif` metadata to update and organize picture files.  Image files can be systematically renamed by their date taken to avoid having a 100's of files all named `Image-1.jpg`.
+## GoPix 
 
-* [Grid](https://github.com/goki/grid) is an interactive drawing program based on SVG vector-based format, like Inkscape.  Inkscape has never worked very well on Mac, and is currently almost unusable due to extremely slow GUI rendering.  Initial basic functionality is in place, with more complete features to be implemented gradually.
+[GoPix](/gopix) is a Go picture management app.
 
-* [Glide](https://github.com/gok/glide) will be a lightweight internet display engine (HTML renderer and web browser), using the GoGi scenegraph as the DOM.  Because GoGi uses CSS natively and already supports HTML-based text formatting, basic functionality should be relatively easy.  Only an idea and a name at this point.
+## Mat32
 
-* [Grail](https://github.com/goki/grail) will be an email app, using Glide for HTML rendering of messages, featuring full keyboard-based navigation (emacs-style of course) and markup-based message formatting.  Only an idea and a name at this point.
+[Mat32](/mat32) is a float32 based vector and matrix package for 2D and 3D graphics that uses a value-based design.
 
-These examples provide a decent codebase to see how to accomplish various things you might want to do.
+**Coming Soon**
 
-As of now, GoGi supports full functionality across the three major desktop platforms: Mac, Linux and Windows, but it should be portable to mobile platforms and wasm with a bit of work by an interested party.  The vast majority of the system works directly on the standard Go `image.Image` interface, and it doesn't use any platform-specific widgets, so it is generally highly portable.
+___
 
-# Screenshots
+## Glide
 
-![Screenshot of Widgets demo](/images/screenshot.png?raw=true "Screenshot of Widgets demo")
+[Glide](/glide) will be a lightweight internet display engine (HTML renderer and web browser), built using Gi.
 
-![Screenshot of Gi3D demo](/images/screenshot_gi3d.png?raw=true "Screenshot of Gi3D demo")
+## Grail
 
-![Screenshot of GiEditor, Dark mode](/images/screenshot_dark.png?raw=true "Screenshot of GiEditor, Dark Mode")
+[Grail](/grail) will be an email app, using Glide for HTML rendering of messages, featuring full keyboard-based navigation and markup-based message formatting.

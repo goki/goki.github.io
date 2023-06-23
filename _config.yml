@@ -34,8 +34,10 @@ plugins:
 
 
 header_pages:
-  - install.md
-  - gettingstarted.md
+  - ki.md
+  - gi/index.md
+  - gi/install.md
+  - gi/gettingstarted.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
