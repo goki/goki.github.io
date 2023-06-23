@@ -1,17 +1,16 @@
 ---
-layout: home
-title: GoKi
-permalink: /
+title: "GoKi"
 ---
+
+# GoKi
 
 GoKi is an open-source project that provides a set of frameworks for constructing cross-platform GUIs and other useful tools in pure Go using full-strength tree structures. The name GoKi is derived from the word tree in Japanese (木), which is pronounced Ki (き). 
 
+## Gi
+[Gi](/gi) is a pure Go 2D and 3D GUI framework, built on [Ki](/ki) and widely used standards in the web, like CSS for styling and SVG for vector graphics.
 
 ## Ki
 The core package of GoKi is [Ki](/ki), which provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.
-
-## Gi
-[Gi](/gi) is a pure Go 2D and 3D GUI framework, built on [Ki](/ki) and widely used standards in the web, like CSS for styling and SVG for vector graphics.
 
 ## Gide
 [Gide](/gide) is an IDE and IDE framework built using [Gi](/gi) and [Pi](/pi). It has standard editor features like syntax highlighting, completion, and version control built-in.
@@ -38,9 +37,9 @@ Grid is a Go SVG vector drawing program, built using Gi and based on Inkscape.
 
 [Mat32](/mat32) is a float32 based vector and matrix package for 2D and 3D graphics that uses a value-based design.
 
-**Coming Soon**
-
 ___
+
+**Coming Soon**
 
 ## Glide
 
