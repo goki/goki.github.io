@@ -1,35 +1,41 @@
 ---
 title: Getting Started
-description: What does your user need to know to try your project?
-categories: [Examples, Placeholders]
-tags: [test, docs]
-weight: 2
+description: Set up prerequisites, install Gi, and run the Widgets example.
+weight: 1
 ---
-
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
-
-Information in this section helps your user try your project themselves.
-
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
-
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
-
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
 
 ## Prerequisites
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+On all platforms, you must download and install Go from [the Go website](https://go.dev/doc/install) if you do not already have Go 1.18+ installed.
+
+### MacOS
+
+1. Install the xcode command-line tools if you don't already have them by running `xcode-select --install`
+2. If you don't already have the Vulkan SDK installed, install it by doing the following:
+    * Run `curl -O https://sdk.lunarg.com/sdk/download/latest/mac/vulkan_sdk.dmg`
+    * Run `open vulkan_sdk.dmg`
+    * Double click `InstallVulkan.app`
+    * Follow the installation prompts and ignore all warnings about the Vulkan Portability Enumeration extension
+
+### Windows
+
+1. Download and install Git for Windows from the [git website](https://git-scm.com/download/win) if you don't already have it. You should install Git Bash as part of this process and use it for development.
+2. Download and install TDM-GCC from [this website](https://jmeubank.github.io/tdm-gcc/)
+3. Open Windows Command Prompt and run `cd C:\TDM-GCC-64`
+4. Then, run `mingwvars.bat`
+
+### Linux
+
+* If you are on Ubuntu or Debian, run `sudo apt-get install libgl1-mesa-dev xorg-dev`
+* If you are on CentOS or Fedora, run `sudo dnf install libX11-devel libXcursor-devel libXrandr-devel libXinerama-devel mesa-libGL-devel libXi-devel libXxf86vm-devel`
 
 ## Installation
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
-
-## Setup
-
-Is there any initial setup users need to do after installation to try your project?
+Clone the Gi repository by running `git clone https://github.com/goki/gi`
 
 ## Try it out!
 
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+4. Navigate to the widgets example by running `cd gi/examples/widgets`
+5. Build the widgets example by running `go build`
+6. Run the widgets example by running `./widgets` if you are on MacOS or Linux and `./widgets.exe` if you are on Windows. This should create a window with a variety of widgets, similar to the screenshot below:
+![Screenshot of Widgets Demo](/screenshots/widgets.png)
