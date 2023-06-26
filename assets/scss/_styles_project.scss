@@ -1,0 +1,9 @@
+.navbar-brand .navbar-logo svg {
+    width: 30px;
+    margin-top: -5px;
+}
+
+// force override the fill color of the dot of the i to be the same as the top bar (primary) color
+.navbar-logo svg ellipse {
+    fill: $primary !important;
+}
