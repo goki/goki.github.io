@@ -2,6 +2,7 @@
 title: Hello World
 description: Create a simple Hello World example app with Gi.
 categories: [Examples]
+weight: 1
 ---
 
 ## Create a new Go project
@@ -33,8 +34,8 @@ categories: [Examples]
     }
 
     func mainrun() {
-      // Create a window called My App Window with width 1024 and height 768
-      win := gi.NewMainWindow("myapp", "My App Window", 1024, 768)
+      // Create a window called My App Window with width 512 and height 384
+      win := gi.NewMainWindow("myapp", "My App Window", 512, 384)
       // Get the viewport within the window
       vp := win.WinViewport2D()
       // Start a protect update on the viewport
@@ -62,5 +63,6 @@ categories: [Examples]
 2. Update your dependencies by running `go mod tidy`
 3. Build the code by running `go build`
 4. Run the app by running `./myapp` if you are on MacOS or Linux and `./myapp.exe` if you are on Windows. This should create a window with text that says "Hello, World," similar to the screenshot below:
+
 ![Screenshot of Hello World App](/screenshots/helloworld.png)
 
