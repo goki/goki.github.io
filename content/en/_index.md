@@ -2,36 +2,31 @@
 title: GoKi
 ---
 
-{{< blocks/cover title="Welcome to GoKi!" image_anchor="top" height="full" >}}
+{{< blocks/cover title="Welcome to GoKi!" image_anchor="top" height="80%" >}}
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/gi/gettingstarted">
   Get Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <!-- <a class="btn btn-lg btn-primary me-3 mb-4" href="https://github.com/goki">
   View on GitHub <i class="fab fa-github ms-2 "></i> -->
 </a>
-<p class="lead mt-5">A framework for trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI framework.</p>
+<p class="lead mt-5">A free and open source framework for building useful, fast, and beautiful 2D and 3D GUIs that run on macOS, Windows, Linux, iOS, and Android with a single pure Go codebase.</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
 
-{{% blocks/lead color="primary" %}}
-GoKi is an open-source project that provides a set of frameworks for constructing cross-platform GUIs and other useful tools in pure Go using full-strength tree structures. The name GoKi is derived from the word tree in Japanese (木), which is pronounced Ki (き). 
-{{% /blocks/lead %}}
-
-
 {{% blocks/section color="dark" type="row" %}}
-{{% blocks/feature icon="fa-wrench" title="Create Almost Anything" url="/docs" %}}
-A large library of widgets and 3D support make it possible to create almost anything with ease.
+{{% blocks/feature icon="fa-wrench" title="Useful" url="/docs" %}}
+A large library of widgets, 3D support, a robust event system, and infinite customizability make it possible to create many useful things, from [fully-featured IDEs](/docs/gide) to [SVG drawing programs](/docs/grid).
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-mobile-screen" title="Write Once, Run Everywhere" url="/docs" %}}
-With a single Go codebase, you can write apps that run on MacOS, Windows, Linux, iOS, Android, and the Web. 
+{{% blocks/feature icon="fa-truck-fast" title="Fast" url="/docs" %}}
+GoKi is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-paintbrush" title="Customize and Extend" url="/docs" %}}
-You can extensively style and customize existing widgets and create new ones.
+{{% blocks/feature icon="fa-paintbrush" title="Beautiful" url="/docs" %}}
+Good default styles and easy, extensive customizability with a direct styling syntax and CSS support make it easy to create apps that look how you want them to.
 {{% /blocks/feature %}}
 
 
