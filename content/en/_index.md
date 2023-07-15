@@ -13,6 +13,11 @@ title: GoKi
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
+{{% pageinfo %}}
+**NOTE:** GoKi is currently undergoing a period of significant developement to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [GoKi GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of GoKi, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Developement of Gi is currently happening on the [mobile branch](https://github.com/goki/gi/tree/mobile).
+
+{{% /pageinfo %}}
+
 
 {{% blocks/section color="dark" type="row" %}}
 {{% blocks/feature icon="fa-wrench" title="Useful" url="/docs" %}}
