@@ -40,11 +40,13 @@ go install github.com/goki/go-tools/cmd/goimports@latest
 Then, you should configure your editor to run the correct version of goimports. For our Gide editor, there is no more configuration necessary. For VS Code, you should follow these steps:
 
 1. Run `which goimports` and copy the result, as you will need it later.
+    - On Windows, run `where goimports` in Command Prompt (not Git Bash like other commands) instead.
 2. Go to Settings and search for `goimports`
 2. Set `Go: Format Tool` to `custom`
 3. In the description for `Go: Format Tool`, click on `Go: Alternate Tools`
 4. Click `Edit in settings.json`
 5. Add a new line under `"go.alternateTools": {` that says `"customFormatter": "{{THE_RESULT_OF_WHICH_GOIMPORTS_THAT_YOU_COPIED}}"` (obviously substituting in the thing you copied earlier)
+    - On Windows, you need to run change the result of `where goimports` that you pasted in by adding an extra backslash to each backslash (for example, `C:\Users\me\go\bin\goimports.exe` would change to `C:\\Users\\me\\go\\bin\\goimports`)
 
 After you do those steps, the `go` section of your settings.json should contain the following lines:
 ```json
