@@ -1,6 +1,6 @@
 ---
 title: Contribution Guidelines
-weight: 1
+weight: 2
 description: How to contribute to GoKi projects
 ---
 

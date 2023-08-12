@@ -1,6 +1,6 @@
 ---
 title: Struct Field Comments
-weight: 2
+weight: 3
 description: How GoKi autogenerates struct field comments
 ---
 
