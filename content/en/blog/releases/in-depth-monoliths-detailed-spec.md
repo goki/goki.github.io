@@ -1,9 +1,7 @@
 ---
-title: Another Great Release
-date: 2018-01-04
-description: >
-  A short lead description about this content page. Text here can also be
-  **bold** or _italic_ and can even be split over multiple paragraphs.
+title: Announcing Version 2
+date: 2023-08-23
+description: Version 2 of the GoKi framework brings significant improvements to many packages
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
