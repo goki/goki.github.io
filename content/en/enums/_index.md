@@ -1,7 +1,7 @@
 ---
-title: Gi
-repo: "https://github.com/goki/gi"
-packages: ["goki.dev/gi"]
+title: Enums
+repo: "https://github.com/goki/enums"
+packages: ["goki.dev/enums", "goki.dev/enumgen"]
 ---
 
 {{< blocks/cover title="The Most Powerful Go GUI Framework" image_anchor="top" height="80%" >}}
