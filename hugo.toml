@@ -202,7 +202,7 @@ desc = "Development takes place here!"
 [minify]
 [minify.tdewolff]
 [minify.tdewolff.html]
-keepQuotes = true # IMPORTANT: NEED this for go vanity urls; otherwise the Go tool XML parser fails on unquoted links with a cryptic error: "go: unrecognized import path "goki.dev/gi": parsing goki.dev/gi: XML syntax error on line 1: expected /> in element"
+keepQuotes = true # IMPORTANT: NEED this for go vanity urls; otherwise the Go tool XML parser fails on unquoted links with a cryptic error; for example: `go: unrecognized import path "goki.dev/gi": parsing goki.dev/gi: XML syntax error on line 1: expected /> in element`; see https://github.com/goki/goki.github.io/issues/1
 
 # hugo module configuration
 
