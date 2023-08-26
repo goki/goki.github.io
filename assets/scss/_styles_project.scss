@@ -4,6 +4,15 @@
 }
 
 // force override the fill color of the dot of the i to be the same as the top bar (primary) color
+// TODO: come up with a better solution for this
 .navbar-logo svg ellipse {
     fill: $primary !important;
+}
+
+.-bg-dark {
+    background-color: hsl(0, 0, 15%);
+}
+
+.td-overlay--dark::after {
+    background-color: hsla(0, 0, 0, 0.3);
 }
