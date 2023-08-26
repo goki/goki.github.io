@@ -202,7 +202,7 @@ desc = "Development takes place here!"
 [minify]
 [minify.tdewolff]
 [minify.tdewolff.html]
-keepQuotes = false
+keepQuotes = true
 
 # hugo module configuration
 
