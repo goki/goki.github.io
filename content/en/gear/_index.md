@@ -1,5 +1,5 @@
 ---
-title: Gear
-repo: "https://github.com/goki/gear"
-packages: ["goki.dev/gear"]
+title: Laser
+repo: "https://github.com/goki/laser"
+packages: ["goki.dev/laser"]
 ---
