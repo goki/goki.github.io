@@ -1,7 +1,7 @@
 ---
 title: Gi
 repo: "https://github.com/goki/gi"
-packages: ["goki.dev/gi"]
+packages: ["goki.dev/gi", "goki.dev/gi/python"]
 ---
 
 {{< blocks/cover title="The Most Powerful Go GUI Framework" image_anchor="top" height="80%" >}}
