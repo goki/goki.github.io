@@ -1,5 +1,5 @@
 ---
 title: Ki
 repo: "https://github.com/goki/ki"
-packages: ["goki.dev/ki"]
+packages: ["goki.dev/ki/v2"]
 ---
