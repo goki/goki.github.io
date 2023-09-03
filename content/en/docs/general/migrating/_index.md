@@ -7,7 +7,13 @@ description: How to migrate to v2 (currently incomplete)
 ## Breaking Changes
 
 ### GoKi-wide
-* `KiT_*` global variables have been renamed to `Type*` (for example, `KiT_Button` changed to `TypeButton`); fixing this should be a simple find and replace for `KiT_` 
+* Import paths have been changed from `github.com/goki/*` to `goki.dev/*` (for example, `github.com/goki/gi` changed to `goki.dev/gi`). All repositories with a changed import URL that were on version 1 are now on version 2 and have a major version URL suffix (for example, `goki.dev/gi/v2`) 
+* `KiT_*` global variables have been renamed to `Type*` (for example, `KiT_Button` changed to `TypeButton`); fixing this should be a simple find and replace for `KiT_` => `Type`
+* `AddNew*` functions and methods have been renamed to `New*` (for example, `AddNewButton` changed to `NewButton`); fixing this should be a simple find a replace for `AddNew` => `New`
+
+### goki/ki
+* Package `ki` has been moved into the root directory of ki, so it is now imported as just `goki.dev/ki/v2`
+* Support for automatic Ki field children has been removed, so you now have to manage that yourself (see https://github.com/goki/ki/issues/17)
 
 ### goki/gi/gi
 * `Defaults()` method removed on several widgets (slider, spinbox, scrollbar, etc); it is no longer needed and all calls of it can be deleted.
