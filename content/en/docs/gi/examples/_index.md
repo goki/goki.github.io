@@ -1,8 +1,8 @@
----
-title: Examples
-weight: 3
-description: Examples of projects built using Gi.
----
++++
+description = 'Examples of projects built using Gi.'
+title = 'Examples'
+weight = 3
++++
 
 * [Gide](/docs/gide)
 * [Grid](/docs/grid)

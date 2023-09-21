@@ -1,5 +1,5 @@
----
-title: GIcons
-repo: "https://github.com/goki/gicons"
-packages: ["goki.dev/gicons"]
----
++++
+packages = ['goki.dev/gicons']
+repo = 'https://github.com/goki/gicons'
+title = 'GIcons'
++++

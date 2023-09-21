@@ -1,8 +1,8 @@
----
-title: GoSL
-description: GoSL implements Go as a shader language for GPU compute shaders by converting Go code to HLSL, and then using the glslc compiler to compile into an `.spv` SPIR-V file that can be loaded into a vulkan compute shader.
-weight: 6
----
++++
+description = 'GoSL implements Go as a shader language for GPU compute shaders by converting Go code to HLSL, and then using the glslc compiler to compile into an `.spv` SPIR-V file that can be loaded into a vulkan compute shader.'
+title = 'GoSL'
+weight = 6
++++
 
 `gosl` implements Go as a shader language for GPU compute shaders: converts Go code to HLSL, and then uses the [glslc](https://github.com/google/shaderc) compiler (e.g., from a vulkan package) to compile into an `.spv` SPIR-V file that can be loaded into a vulkan compute shader.  `glslc` must be [installed](https://askubuntu.com/questions/1252585/how-to-install-glslc-on-ubuntu-20-04)!
 

@@ -1,8 +1,8 @@
----
-title: Ki
-description: Ki provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.
-weight: 2
----
++++
+description = 'Ki provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.'
+title = 'Ki'
+weight = 2
++++
 
 Go language (golang) tree structure (ki = 木 = tree in Japanese)
 

@@ -1,5 +1,5 @@
----
-title: SVG
-repo: "https://github.com/goki/svg"
-packages: ["goki.dev/svg"]
----
++++
+packages = ['goki.dev/svg']
+repo = 'https://github.com/goki/svg'
+title = 'SVG'
++++

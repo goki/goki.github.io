@@ -1,8 +1,8 @@
----
-title: Pi
-description: Pi is an interactive parsing library that uses a simple and robust form of lexing and parsing based on top-down recursive descent.
-weight: 4
----
++++
+description = 'Pi is an interactive parsing library that uses a simple and robust form of lexing and parsing based on top-down recursive descent.'
+title = 'Pi'
+weight = 4
++++
 
 The `pi` package supports a simple and robust form of lexing and parsing based on top-down recursive descent, and allows users to create parsers using the [GoGi](https://github.com/goki/gi) graphical interface system.  It is used for syntax highlighting, completion, and more advanced language-structure specific functionality in GoGi and in the [Gide](https://github.com/goki/gide) IDE / editor (where we need to support multiple different languages, and can't just rely on the excellent builtin Go parser).
 

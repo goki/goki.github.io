@@ -1,8 +1,8 @@
----
-title: Migrating to v2
-weight: 1
-description: How to migrate to v2 (currently incomplete)
----
++++
+description = 'How to migrate to v2 (currently incomplete)'
+title = 'Migrating to v2'
+weight = 1
++++
 
 ## Breaking Changes
 

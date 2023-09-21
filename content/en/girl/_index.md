@@ -1,5 +1,5 @@
----
-title: GiRl
-repo: "https://github.com/goki/girl"
-packages: ["goki.dev/girl"]
----
++++
+packages = ['goki.dev/girl']
+repo = 'https://github.com/goki/girl'
+title = 'GiRl'
++++

@@ -1,5 +1,5 @@
----
-title: GTI
-repo: "https://github.com/goki/gti"
-packages: ["goki.dev/gti"]
----
++++
+packages = ['goki.dev/gti']
+repo = 'https://github.com/goki/gti'
+title = 'GTI'
++++

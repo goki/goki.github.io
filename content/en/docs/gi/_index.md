@@ -1,8 +1,8 @@
----
-title: Gi
-description: Gi is a pure Go 2D and 3D GUI framework, built on [Ki](/docs/ki) and widely used standards in the web, like CSS for styling and SVG for vector graphics.
-weight: 1
----
++++
+description = 'Gi is a pure Go 2D and 3D GUI framework, built on [Ki](/docs/ki) and widely used standards in the web, like CSS for styling and SVG for vector graphics.'
+title = 'Gi'
+weight = 1
++++
 
 Gi is a scenegraph-based 2D and 3D GUI / graphics interface (Gi) in Go, that functions similar to HTML / CSS / SVG  and Qt.
 

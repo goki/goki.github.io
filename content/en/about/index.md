@@ -1,8 +1,11 @@
----
-title: About GoKi
-linkTitle: About
-menu: {main: {weight: 10}}
----
++++
+linkTitle = 'About'
+title = 'About GoKi'
+
+[menu]
+  [menu.main]
+    weight = 10
++++
 
 {{% blocks/cover title="About GoKi" image_anchor="bottom" height="auto" %}}
 

@@ -1,8 +1,8 @@
----
-title: Struct Field Comments
-weight: 3
-description: How GoKi autogenerates struct field comments
----
++++
+description = 'How GoKi autogenerates struct field comments'
+title = 'Struct Field Comments'
+weight = 3
++++
 
 ## How Struct Field Descriptions Work
 

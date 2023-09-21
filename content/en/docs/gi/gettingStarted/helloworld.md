@@ -1,9 +1,9 @@
----
-title: Hello World
-description: Create a simple Hello World example app with Gi.
-categories: [Examples]
-weight: 1
----
++++
+categories = ['Examples']
+description = 'Create a simple Hello World example app with Gi.'
+title = 'Hello World'
+weight = 1
++++
 
 ## Create a new Go project
 

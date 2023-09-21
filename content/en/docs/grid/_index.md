@@ -1,8 +1,8 @@
----
-title: Grid
-description: Grid is a Go SVG vector drawing program, built using Gi and based on Inkscape.
-weight: 7
----
++++
+description = 'Grid is a Go SVG vector drawing program, built using Gi and based on Inkscape.'
+title = 'Grid'
+weight = 7
++++
 
 Grid is a GoGi-based SVG vector drawing program, with design based on Inkscape.
 

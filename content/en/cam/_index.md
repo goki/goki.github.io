@@ -1,5 +1,5 @@
----
-title: Cam
-repo: "https://github.com/goki/cam"
-packages: ["goki.dev/cam"]
----
++++
+packages = ['goki.dev/cam']
+repo = 'https://github.com/goki/cam'
+title = 'Cam'
++++

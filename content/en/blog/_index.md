@@ -1,4 +1,7 @@
----
-title: Blog
-menu: {main: {weight: 30}}
----
++++
+title = 'Blog'
+
+[menu]
+  [menu.main]
+    weight = 30
++++

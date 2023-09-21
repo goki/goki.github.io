@@ -1,5 +1,5 @@
----
-title: Grid
-repo: "https://github.com/goki/grid"
-packages: ["goki.dev/grid"]
----
++++
+packages = ['goki.dev/grid']
+repo = 'https://github.com/goki/grid'
+title = 'Grid'
++++

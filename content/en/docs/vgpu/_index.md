@@ -1,8 +1,8 @@
----
-title: vGPU
-description: vGPU is a Vulkan-based framework for both Graphics and Compute Engine use of GPU hardware in Go.
-weight: 5
----
++++
+description = 'vGPU is a Vulkan-based framework for both Graphics and Compute Engine use of GPU hardware in Go.'
+title = 'vGPU'
+weight = 5
++++
 
 **Mac Installation prerequisite:** https://vulkan.lunarg.com/sdk/home -- download the Vulkan SDK installer for the mac.  Unfortunately there does not appear to be a full version of this on homebrew -- the `molten-vk` package is not enough by itself.
 

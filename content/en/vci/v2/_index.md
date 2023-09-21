@@ -1,5 +1,5 @@
----
-title: VCI
-repo: "https://github.com/goki/vci"
-packages: ["goki.dev/vci/v2"]
----
++++
+packages = ['goki.dev/vci/v2']
+repo = 'https://github.com/goki/vci'
+title = 'VCI'
++++

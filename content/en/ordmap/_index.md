@@ -1,5 +1,5 @@
----
-title: Ordmap
-repo: "https://github.com/goki/ordmap"
-packages: ["goki.dev/ordmap"]
----
++++
+packages = ['goki.dev/ordmap']
+repo = 'https://github.com/goki/ordmap'
+title = 'Ordmap'
++++

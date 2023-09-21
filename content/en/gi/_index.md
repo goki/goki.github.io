@@ -1,8 +1,8 @@
----
-title: Gi
-repo: "https://github.com/goki/gi"
-packages: ["goki.dev/gi", "goki.dev/gi/python"]
----
++++
+packages = ['goki.dev/gi', 'goki.dev/gi/python']
+repo = 'https://github.com/goki/gi'
+title = 'Gi'
++++
 
 {{< blocks/cover title="The Most Powerful Go GUI Framework" image_anchor="top" height="80%" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="https://github.com/goki/gi">

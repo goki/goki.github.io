@@ -1,5 +1,5 @@
----
-title: GoSL
-repo: "https://github.com/goki/gosl"
-packages: ["goki.dev/gosl"]
----
++++
+packages = ['goki.dev/gosl']
+repo = 'https://github.com/goki/gosl'
+title = 'GoSL'
++++

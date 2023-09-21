@@ -1,8 +1,8 @@
----
-title: GoPix
-description: GoPix is a keyboard-navigable Go picture management app.
-weight: 8
----
++++
+description = 'GoPix is a keyboard-navigable Go picture management app.'
+title = 'GoPix'
+weight = 8
++++
 
 Go picture management app, because Mac Photos bricked my entire photo library upon updating to Catalina...
 

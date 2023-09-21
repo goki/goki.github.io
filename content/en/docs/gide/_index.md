@@ -1,8 +1,8 @@
----
-title: Gide
-description: Gide is an IDE and IDE framework built using [Gi](/docs/gi) and [Pi](/docs/pi). It has standard editor features like syntax highlighting, completion, and version control built-in.
-weight: 3
----
++++
+description = 'Gide is an IDE and IDE framework built using [Gi](/docs/gi) and [Pi](/docs/pi). It has standard editor features like syntax highlighting, completion, and version control built-in.'
+title = 'Gide'
+weight = 3
++++
 
 **Gide** is a flexible IDE (integrated development environment) framework in pure Go, using the [GoGi](https://github.com/goki/gi) GUI (for which it serves as a continuous testing platform :) and the [GoPi](https://github.com/goki/pi) interactive parser for syntax highlighting and more advanced IDE code processing.
 

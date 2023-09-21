@@ -1,8 +1,8 @@
----
-title: Glide
-description: Glide will be a lightweight internet display engine (HTML renderer and web browser), built using Gi.
-weight: 10
----
++++
+description = 'Glide will be a lightweight internet display engine (HTML renderer and web browser), built using Gi.'
+title = 'Glide'
+weight = 10
++++
 
 Glide is GoGi-based Lightweight Internet Display Engine (i.e., a web browser in native Go)
 

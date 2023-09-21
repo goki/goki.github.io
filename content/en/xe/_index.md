@@ -1,5 +1,5 @@
----
-title: XE
-repo: "https://github.com/goki/xe"
-packages: ["goki.dev/xe"]
----
++++
+packages = ['goki.dev/xe']
+repo = 'https://github.com/goki/xe'
+title = 'XE'
++++

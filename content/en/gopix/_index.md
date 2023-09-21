@@ -1,5 +1,5 @@
----
-title: GoPix
-repo: "https://github.com/goki/gopix"
-packages: ["goki.dev/gopix"]
----
++++
+packages = ['goki.dev/gopix']
+repo = 'https://github.com/goki/gopix'
+title = 'GoPix'
++++

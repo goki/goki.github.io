@@ -1,5 +1,5 @@
----
-title: Laser
-repo: "https://github.com/goki/laser"
-packages: ["goki.dev/laser"]
----
++++
+packages = ['goki.dev/laser']
+repo = 'https://github.com/goki/laser'
+title = 'Laser'
++++

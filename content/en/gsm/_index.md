@@ -1,5 +1,5 @@
----
-title: GSM
-repo: "https://github.com/goki/gsm"
-packages: ["goki.dev/gsm"]
----
++++
+packages = ['goki.dev/gsm']
+repo = 'https://github.com/goki/gsm'
+title = 'GSM'
++++

@@ -1,8 +1,8 @@
----
-title: Getting Started
-description: Set up prerequisites, install Gi, and run the Widgets example.
-weight: 1
----
++++
+description = 'Set up prerequisites, install Gi, and run the Widgets example.'
+title = 'Getting Started'
+weight = 1
++++
 
 ## Prerequisites
 

@@ -1,5 +1,5 @@
----
-title: vGPU
-repo: "https://github.com/goki/vgpu"
-packages: ["goki.dev/vgpu"]
----
++++
+packages = ['goki.dev/vgpu']
+repo = 'https://github.com/goki/vgpu'
+title = 'vGPU'
++++

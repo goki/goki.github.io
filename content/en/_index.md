@@ -1,6 +1,6 @@
----
-title: GoKi
----
++++
+title = 'GoKi'
++++
 
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/gi/gettingstarted">

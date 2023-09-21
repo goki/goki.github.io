@@ -1,5 +1,5 @@
----
-title: Prof
-repo: "https://github.com/goki/prof"
-packages: ["goki.dev/prof/v2"]
----
++++
+packages = ['goki.dev/prof/v2']
+repo = 'https://github.com/goki/prof'
+title = 'Prof'
++++

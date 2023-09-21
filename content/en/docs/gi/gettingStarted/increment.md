@@ -1,9 +1,9 @@
----
-title: Increment
-description: Extend the Hello World example to support incrementing a number by clicking on a button.
-categories: [Examples]
-weight: 2
----
++++
+categories = ['Examples']
+description = 'Extend the Hello World example to support incrementing a number by clicking on a button.'
+title = 'Increment'
+weight = 2
++++
 
 In the last section, you built a simple app that says, "Hello, World!" In this section, you will add to that app by creating a button that increments a label. To do that, you need to add the following code after the "Hello, World!" label:
 

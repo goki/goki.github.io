@@ -1,8 +1,8 @@
----
-title: Contribution Guidelines
-weight: 2
-description: How to contribute to GoKi projects
----
++++
+description = 'How to contribute to GoKi projects'
+title = 'Contribution Guidelines'
+weight = 2
++++
 
 ## Bugs
 

@@ -1,5 +1,5 @@
----
-title: GiPY
-repo: "https://github.com/goki/gipy"
-packages: ["goki.dev/gipy"]
----
++++
+packages = ['goki.dev/gipy']
+repo = 'https://github.com/goki/gipy'
+title = 'GiPY'
++++

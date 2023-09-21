@@ -1,8 +1,8 @@
----
-title: Mat32
-description: Mat32 is a float32 based vector and matrix package for 2D and 3D graphics that uses a value-based design.
-weight: 9
----
++++
+description = 'Mat32 is a float32 based vector and matrix package for 2D and 3D graphics that uses a value-based design.'
+title = 'Mat32'
+weight = 9
++++
 
 `mat32` is a float32 based vector and matrix package for 2D & 3D graphics, based on the [G3N math32](https://github.com/g3n/engine) package, but using a value-based design instead of pointer-based, which simplifies chained expressions of multiple operators.
 

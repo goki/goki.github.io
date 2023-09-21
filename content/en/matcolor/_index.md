@@ -1,5 +1,5 @@
----
-title: MatColor
-repo: "https://github.com/goki/matcolor"
-packages: ["goki.dev/matcolor"]
----
++++
+packages = ['goki.dev/matcolor']
+repo = 'https://github.com/goki/matcolor'
+title = 'MatColor'
++++

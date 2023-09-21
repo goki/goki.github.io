@@ -1,8 +1,8 @@
----
-title: Grail
-description: Grail will be an email app, using Glide for HTML rendering of messages, featuring full keyboard-based navigation and markup-based message formatting.
-weight: 11
----
++++
+description = 'Grail will be an email app, using Glide for HTML rendering of messages, featuring full keyboard-based navigation and markup-based message formatting.'
+title = 'Grail'
+weight = 11
++++
 
 Grail is a (planned) email app in the GoGi GUI framework.
 

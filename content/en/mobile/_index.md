@@ -1,5 +1,5 @@
----
-title: Mobile
-repo: "https://github.com/goki/mobile"
-packages: ["goki.dev/mobile"]
----
++++
+packages = ['goki.dev/mobile']
+repo = 'https://github.com/goki/mobile'
+title = 'Mobile'
++++

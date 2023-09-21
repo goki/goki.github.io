@@ -1,5 +1,5 @@
----
-title: Enums
-repo: "https://github.com/goki/enums"
-packages: ["goki.dev/enums"]
----
++++
+packages = ['goki.dev/enums']
+repo = 'https://github.com/goki/enums'
+title = 'Enums'
++++

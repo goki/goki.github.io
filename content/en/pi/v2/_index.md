@@ -1,5 +1,5 @@
----
-title: Pi
-repo: "https://github.com/goki/pi"
-packages: ["goki.dev/pi/v2"]
----
++++
+packages = ['goki.dev/pi/v2']
+repo = 'https://github.com/goki/pi'
+title = 'Pi'
++++
