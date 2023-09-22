@@ -17,6 +17,21 @@
     background-color: hsla(0, 0, 0, 0.3);
 }
 
+.td-navbar .nav-link {
+    color: white;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.td-navbar .nav-link:hover {
+    color: hsl(0, 0%, 80%);
+}
+
+.display-1,
+.lead {
+    font-weight: 400;
+}
+
 .repositories-section-index-list {
     display: flex;
     flex-direction: column;
