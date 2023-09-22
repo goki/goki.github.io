@@ -2,6 +2,7 @@
 packages = ['goki.dev/gi', 'goki.dev/gi/python']
 repo = 'https://github.com/goki/gi'
 title = 'Gi'
+description = 'A free and open source framework for building useful, fast, and beautiful 2D and 3D GUIs that run on macOS, Windows, Linux, iOS, and Android with a single pure Go codebase.'
 +++
 
 {{< blocks/cover title="The Most Powerful Go GUI Framework" image_anchor="top" height="80%" >}}
