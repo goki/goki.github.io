@@ -4,7 +4,9 @@
     {{ $pages = (where $pages "Type" "!=" "search") }}
     {{ $pages = (where $pages ".Params.hide_summary" "!=" true) }}
     {{ $pages = (where $pages ".Parent" "!=" nil) }}
-    {{ $pages = (where $pages "Parent.File.UniqueID" "==" $parent.Parent.File.UniqueID) }} {{/* exclude v2 directories
+    {{ $pages = (where $pages ".Parent.File" "!=" nil) }}
+    {{ $pages = (where $pages ".Parent.File.UniqueID" "==" $parent.Parent.File.UniqueID) }}
+    {{/* exclude v2 directories
     by checking if the page's parent is our parent (the root directory) */}}
     {{ $pages = (where $pages ".Params.repo" "!=" nil ) }}
     {{ if or $parent.Params.no_list (eq (len $pages) 0) }}
@@ -23,17 +25,19 @@
     {{ else }}
     {{/* Otherwise we show a nice formatted list of subpages with page descriptions */}}
     <hr class="panel-line">
-    {{ range $pages }}
-    {{ $manualLink := cond (isset .Params "manuallink") .Params.manualLink ( cond (isset .Params "manuallinkrelref")
-    (relref . .Params.manualLinkRelref) .RelPermalink) }}
-    <div class="entry">
-        <h5>
-            <a href="{{ $manualLink }}" {{ with .Params.manualLinkTitle }} title="{{ . }}" {{ end }}{{ with
-                .Params.manualLinkTarget }} target="{{ . }}" {{ if eq . "_blank" }} rel="noopener" {{ end }}{{ end
-                }}>{{- .Title -}}</a>
-        </h5>
-        <p>{{ .Description | markdownify }}</p>
+    <div class="repositories-section-index-list">
+        {{ range $pages }}
+        {{ $manualLink := cond (isset .Params "manuallink") .Params.manualLink ( cond (isset .Params "manuallinkrelref")
+        (relref . .Params.manualLinkRelref) .RelPermalink) }}
+        <div class="entry">
+            <h5>
+                <a href="{{ $manualLink }}" {{ with .Params.manualLinkTitle }} title="{{ . }}" {{ end }}{{ with
+                    .Params.manualLinkTarget }} target="{{ . }}" {{ if eq . "_blank" }} rel="noopener" {{ end }}{{ end
+                    }}>{{- .Title -}}</a>
+            </h5>
+            <p>{{ .Description | markdownify }}</p>
+        </div>
+        {{ end }}
     </div>
-    {{ end }}
     {{ end }}
 </div>

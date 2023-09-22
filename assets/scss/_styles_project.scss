@@ -16,3 +16,10 @@
 .td-overlay--dark::after {
     background-color: hsla(0, 0, 0, 0.3);
 }
+
+.repositories-section-index-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 60vh;
+}
