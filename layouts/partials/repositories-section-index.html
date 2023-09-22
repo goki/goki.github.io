@@ -1,10 +1,12 @@
 <div class="repositories-section-index">
     {{ $parent := .Page }}
-    {{ $pages := (where .Site.Pages "Section" .Section).ByWeight }}
+    {{ $pages := .Site.Pages.ByWeight }}
     {{ $pages = (where $pages "Type" "!=" "search") }}
     {{ $pages = (where $pages ".Params.hide_summary" "!=" true) }}
     {{ $pages = (where $pages ".Parent" "!=" nil) }}
-    {{ $pages = (where $pages ".Repository" "!=" nil) }}
+    {{ $pages = (where $pages "Parent.File.UniqueID" "==" $parent.Parent.File.UniqueID) }} {{/* exclude v2 directories
+    by checking if the page's parent is our parent (the root directory) */}}
+    {{ $pages = (where $pages ".Params.repo" "!=" nil ) }}
     {{ if or $parent.Params.no_list (eq (len $pages) 0) }}
     {{/* If no_list is true or we don't have subpages we don't show a list of subpages */}}
     {{ else if $parent.Params.simple_list }}
