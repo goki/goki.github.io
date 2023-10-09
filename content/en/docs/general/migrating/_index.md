@@ -18,6 +18,7 @@ weight = 1
 ### goki/gi/gi
 * `Defaults()` method removed on several widgets (slider, spinbox, scrollbar, etc); it is no longer needed and all calls of it can be deleted.
 * `MenuButton` widget removed; use `Button` instead, as you can put a menu on any button. If you want the arrow indicator again, put `button.Indicator = icons.KeyboardArrowDown`
+* `Action` and `ButtonBase` removed; use `Button` instead.
 * `Inactive` renamed to `Disabled` and `Active` to `Enabled`. Many node flag functions (eg, `SetInactive`, `IsActive`, etc) as well as the actual enum constants must be renamed.
 * `ClearAct` field on `TextField` converted to `LeadingIcon` and `TrailingIcon`; use `AddClearAction()` to easily replicate the same functionality.
 * `gi.IconName` removed and replaced with `icons.Icon`; many functions and fields have changed types that must be updated; also, previous icon names may be broken or have changed to new icons, and it is strongly recommended that you use the new icon constants instead of untyped string literals. 
