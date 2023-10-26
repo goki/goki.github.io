@@ -14,7 +14,7 @@ title = 'GoKi'
 {{< /blocks/cover >}}
 
 {{% pageinfo %}}
-**NOTE:** GoKi is currently undergoing a period of significant developement to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [GoKi GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of GoKi, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Developement of Gi is currently happening on the [mobile branch](https://github.com/goki/gi/tree/mobile).
+**NOTE:** GoKi is currently undergoing a period of significant development to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [GoKi GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of GoKi, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Development of Gi is currently happening on the [main branch](https://github.com/goki/gi/tree/main). For the latest stable version of Gi, import version 1.3.19 and see the [v1 branch](https://github.com/goki/gi/tree/v1).
 
 {{% /pageinfo %}}
 
