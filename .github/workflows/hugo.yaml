@@ -56,6 +56,10 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      # We need to unzip our zipped WASM because GitHub automatically
+      # zips it itself and does not work with pre-zipped files
+      - name: Unzip WASM
+        run: "mv static/demo/app.wasm static/demo/app.wasm.gz && gzip -d static/demo/app.wasm.gz"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
