@@ -241,7 +241,7 @@ async function goappInitWebAssembly() {
 
     const go = new Go();
     wasm = await instantiateStreaming(
-      fetchWithProgress("app.wasm.gz", showProgress),
+      fetchWithProgress("app.wasm", showProgress),
       go.importObject,
     );
     go.run(wasm.instance);

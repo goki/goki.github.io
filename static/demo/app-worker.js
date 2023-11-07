@@ -1,5 +1,5 @@
 const cacheName = "app-" + "v0.0.0";
-const resourcesToCache = ["app.css","app.js","app.wasm.gz","manifest.webmanifest","wasm_exec.js","index.html"];
+const resourcesToCache = ["app.css","app.js","app.wasm","manifest.webmanifest","wasm_exec.js","index.html"];
 
 self.addEventListener("install", (event) => {
   console.log("installing app worker v0.0.0");

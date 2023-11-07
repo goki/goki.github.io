@@ -222,7 +222,7 @@ enableGitInfo = true
 
 [server]
   [[server.headers]]
-    for = '/**.wasm.gz'
+    for = '/**.wasm'
     [server.headers.values]
       Content-Type = "application/wasm"
       Content-Encoding = "gzip"
