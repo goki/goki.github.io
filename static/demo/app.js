@@ -5,7 +5,7 @@ var goappNav = function () { };
 var goappOnUpdate = function () { };
 var goappOnAppInstallChange = function () { };
 
-const goappEnv = {"GOAPP_ROOT_PREFIX":".","GOAPP_STATIC_RESOURCES_URL":"/","GOAPP_VERSION":"v0.0.0-1dee13e5a83a94c60e55c16b7dc942bebd036bb9"};
+const goappEnv = {"GOAPP_ROOT_PREFIX":".","GOAPP_STATIC_RESOURCES_URL":"/","GOAPP_VERSION":"v0.0.0"};
 const goappLoadingLabel = "";
 const goappWasmContentLengthHeader = "";
 
@@ -24,7 +24,7 @@ async function goappInitServiceWorker() {
   if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register(
-        "/app-worker.js"
+        "app-worker.js"
       );
 
       goappServiceWorkerRegistration = registration;
@@ -241,7 +241,7 @@ async function goappInitWebAssembly() {
 
     const go = new Go();
     wasm = await instantiateStreaming(
-      fetchWithProgress("/app.wasm.gz", showProgress),
+      fetchWithProgress("app.wasm.gz", showProgress),
       go.importObject,
     );
     go.run(wasm.instance);
