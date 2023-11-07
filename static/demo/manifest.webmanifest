@@ -1,0 +1,27 @@
+{
+  "short_name": "demo",
+  "name": "demo",
+  "description": "",
+  "icons": [
+    {
+      "src": "/icons/svg.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/",
+  "background_color": "#2d2c2c",
+  "theme_color": "#2d2c2c",
+  "display": "standalone"
+}
