@@ -31,7 +31,7 @@ jobs:
 
   # Build goki job
   build-goki:
-    name: Build
+    name: Build GoKi
     strategy:
         matrix:
             go-version: [1.21.x]
