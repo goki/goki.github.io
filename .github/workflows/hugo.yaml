@@ -48,17 +48,17 @@ jobs:
       - name: Build Demo
         run: goki build ./demo -o static/demo -t js
 
+      # We need to unzip our zipped WASM because GitHub automatically
+      # zips it itself and does not work with pre-zipped files
+      - name: Unzip WASM
+        run: "mv static/demo/app.wasm static/demo/app.wasm.gz && gzip -d static/demo/app.wasm.gz"
+
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -70,10 +70,6 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      # We need to unzip our zipped WASM because GitHub automatically
-      # zips it itself and does not work with pre-zipped files
-      - name: Unzip WASM
-        run: "mv static/demo/app.wasm static/demo/app.wasm.gz && gzip -d static/demo/app.wasm.gz"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
