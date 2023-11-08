@@ -36,7 +36,7 @@ jobs:
       HUGO_VERSION: 0.114.0
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install Go
         uses: actions/setup-go@v4
         with:
@@ -47,11 +47,6 @@ jobs:
 
       - name: Build Demo
         run: goki build ./demo -o static/demo -t js
-
-      # We need to unzip our zipped WASM because GitHub automatically
-      # zips it itself and does not work with pre-zipped files
-      - name: Unzip WASM
-        run: "mv static/demo/app.wasm static/demo/app.wasm.gz && gzip -d static/demo/app.wasm.gz"
 
       - name: Install Hugo CLI
         run: |
