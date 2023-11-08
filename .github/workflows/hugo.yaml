@@ -45,7 +45,8 @@ jobs:
             go-version: ${{ matrix.go-version }}
 
     - name: Install GoKi
-      run: go install goki.dev/goki@latest
+      # we don't want a GUI in the CI
+      run: go install goki.dev/goki@latest -tags offscreen
 
     - name: Build Demo
       run: goki build demo -o static/demo -t js
