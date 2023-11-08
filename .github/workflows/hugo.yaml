@@ -35,6 +35,8 @@ jobs:
     env:
       HUGO_VERSION: 0.114.0
     steps:
+      - uses: actions/checkout@v3
+      
       - name: Install Go
         uses: actions/setup-go@v4
         with:
