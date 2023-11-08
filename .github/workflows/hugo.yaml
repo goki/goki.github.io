@@ -46,7 +46,7 @@ jobs:
 
     - name: Install GoKi
       # we don't want a GUI in the CI
-      run: go install goki.dev/goki@latest -tags offscreen
+      run: go install -tags offscreen goki.dev/goki@latest
 
     - name: Build Demo
       run: goki build demo -o static/demo -t js
