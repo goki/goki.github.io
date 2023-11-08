@@ -4,7 +4,7 @@ title = 'GoKi'
 
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/demo">
-  Run Demo <i class="fab fa-play ms-2 "></i>
+  Run Demo <i class="fas fa-play ms-2 "></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/gi/gettingstarted">
   Get Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
