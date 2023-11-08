@@ -49,11 +49,12 @@ jobs:
       run: go install -tags offscreen goki.dev/goki@latest
 
     - name: Build Demo
-      run: goki build demo -o static/demo -t js
+      run: goki build ./demo -o static/demo -t js
 
   # Build job
   build:
     runs-on: ubuntu-latest
+    needs: build-goki
     env:
       HUGO_VERSION: 0.114.0
     steps:
