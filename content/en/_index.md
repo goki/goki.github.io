@@ -3,11 +3,11 @@ title = 'GoKi'
 +++
 
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/demo">
+  Run Demo <i class="fab fa-play ms-2 "></i>
+</a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/docs/gi/gettingstarted">
   Get Started <i class="fas fa-arrow-alt-circle-right ms-2"></i>
-</a>
-<!-- <a class="btn btn-lg btn-primary me-3 mb-4" href="https://github.com/goki">
-  View on GitHub <i class="fab fa-github ms-2 "></i> -->
 </a>
 <p class="lead mt-5">A free and open source framework for building useful, fast, and beautiful 2D and 3D GUIs that run on macOS, Windows, Linux, iOS, and Android with a single pure Go codebase.</p>
 {{< blocks/link-down color="info" >}}
