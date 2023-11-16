@@ -30,7 +30,7 @@ func app() {
 	sc := gi.NewScene("gogi-demo").SetTitle("GoGi Demo")
 
 	ts := gi.NewTabs(sc)
-	ts.NewTabButton = true
+	ts.DeleteTabButtons = false
 
 	makeHome(ts)
 	makeText(ts)
