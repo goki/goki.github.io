@@ -52,7 +52,7 @@ require (
 	goki.dev/grog v0.0.13 // indirect
 	goki.dev/grows v0.3.15 // indirect
 	goki.dev/grr v0.0.6 // indirect
-	goki.dev/ki/v2 v2.0.0-dev0.0.19 // indirect
+	goki.dev/ki/v2 v2.0.0-dev0.0.19.0.20231118101925-72c32e1ceb16 // indirect
 	goki.dev/laser v0.1.18 // indirect
 	goki.dev/pi/v2 v2.0.0-dev0.0.12 // indirect
 	goki.dev/prof/v2 v2.0.0-dev0.0.4 // indirect
