@@ -4,9 +4,9 @@ go 1.21.0
 
 require (
 	goki.dev/colors v0.8.29
-	goki.dev/gi/v2 v2.0.0-dev0.0.13
-	goki.dev/girl v0.0.21
-	goki.dev/goosi v0.0.11
+	goki.dev/gi/v2 v2.0.0-dev0.0.13.0.20231119071138-3242e623e948
+	goki.dev/girl v0.0.22-0.20231118000629-18a67f9bb7d1
+	goki.dev/goosi v0.0.12-0.20231119071855-e4c26db542ca
 	goki.dev/gti v0.1.16
 	goki.dev/icons v0.0.9
 	goki.dev/mat32/v2 v2.0.0-dev0.0.13
@@ -22,7 +22,7 @@ require (
 	github.com/akutz/sortfold v0.2.1 // indirect
 	github.com/alecthomas/chroma/v2 v2.11.1 // indirect
 	github.com/anthonynsimon/bild v0.13.0 // indirect
-	github.com/antonmedv/expr v1.15.3 // indirect
+	github.com/antonmedv/expr v1.15.4 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/c2h5oh/datasize v0.0.0-20220606134207-859f65c6625b // indirect
@@ -30,7 +30,7 @@ require (
 	github.com/fatih/camelcase v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
-	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20231102141658-eca20e8abded // indirect
+	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20231117230948-b8b00452e321 // indirect
 	github.com/goki/freetype v1.0.1 // indirect
 	github.com/goki/go-difflib v1.2.1 // indirect
 	github.com/goki/vulkan v1.0.7 // indirect
@@ -48,7 +48,7 @@ require (
 	goki.dev/cam v0.9.35 // indirect
 	goki.dev/cursors v0.0.17 // indirect
 	goki.dev/enums v0.9.38 // indirect
-	goki.dev/glop v0.1.5 // indirect
+	goki.dev/glop v0.1.6-0.20231118061706-4995517ab57a // indirect
 	goki.dev/grog v0.0.13 // indirect
 	goki.dev/grows v0.3.15 // indirect
 	goki.dev/grr v0.0.6 // indirect
