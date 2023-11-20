@@ -39,30 +39,27 @@ Good default styles and easy, extensive customizability with a direct styling sy
 </feature-block>
 </div>
 
-{{% blocks/section %}}
-Applications Built With GoKi
-{.h1 .text-center}
-{{% /blocks/section %}}
+# Applications Built With GoKi
 
+<div>
+<feature-block title="Gide" icon="code">
 
-{{% blocks/section type="row" %}}
-
-{{% blocks/feature icon="fa-code" title="Gide" url="/gide" %}}
 An IDE and IDE framework built using Gi, with standard editor features like syntax highlighting, completion, and version control built-in.
-{{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-draw-polygon" title="Grid" url="/grid" %}}
+</feature-block>
+
+<feature-block title="Grid" icon="polyline">
+
 A Go SVG vector drawing program, built using Gi and based on Inkscape.
-{{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-image" title="GoPix" url="/gopix" %}}
+</feature-block>
+
+
+<feature-block title="GoPix" icon="image">
+
 A keyboard-navigable Go picture management app, built with Gi.
-{{% /blocks/feature %}}
 
-{{% /blocks/section %}}
+</feature-block>
+</div>
 
-
-{{% blocks/section %}}
-See more examples [here](/docs/examples)
-{.h2 .text-center}
-{{% /blocks/section %}}
+## See more examples [here](/docs/examples)
