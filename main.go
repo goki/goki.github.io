@@ -7,11 +7,15 @@ package main
 import (
 	"embed"
 	"io/fs"
+	"maps"
 
 	"goki.dev/gi/v2/gi"
 	"goki.dev/gi/v2/gimain"
+	"goki.dev/girl/styles"
+	"goki.dev/glide/gidom"
 	"goki.dev/grr"
 	"goki.dev/webki"
+	"golang.org/x/net/html"
 )
 
 //go:embed content/en
@@ -20,9 +24,20 @@ var content embed.FS
 func main() { gimain.Run(app) }
 
 func app() {
+	maps.Copy(gidom.ElementHandlers, elementHandlers)
 	b := gi.NewBody("goki")
 	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
 	grr.Log0(pg.OpenURL(""))
 	gi.DefaultTopAppBar = pg.TopAppBar
 	gi.NewWindow(gi.NewScene(b)).Run().Wait()
+}
+
+var elementHandlers = map[string]gidom.Handler{
+	"block-feature": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
+		f := gi.NewFrame(par).Style(func(s *styles.Style) {
+			s.Direction = styles.Column
+		})
+		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(n, "title"))
+		return f, true
+	},
 }

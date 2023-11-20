@@ -21,8 +21,9 @@ title = 'GoKi'
 
 {{% blocks/section color="dark" type="row" %}}
 {{% blocks/feature icon="fa-wrench" title="Useful" url="/docs" %}}
+<block-feature title="Useful">
 A large library of widgets, 3D support, a robust event system, and infinite customizability make it possible to create many useful things, from [fully-featured IDEs](/docs/gide) to [SVG drawing programs](/docs/grid).
-{{% /blocks/feature %}}
+</block-feature>
 
 
 {{% blocks/feature icon="fa-truck-fast" title="Fast" url="/docs" %}}
