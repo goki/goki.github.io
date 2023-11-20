@@ -20,9 +20,9 @@ var content embed.FS
 func main() { gimain.Run(app) }
 
 func app() {
-	sc := gi.NewScene("goki").SetTitle("GoKi")
-	pg := webki.NewPage(sc).SetSource(grr.Log(fs.Sub(content, "content/en")))
+	b := gi.NewBody("goki")
+	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
 	grr.Log0(pg.OpenURL(""))
 	gi.DefaultTopAppBar = pg.TopAppBar
-	gi.NewWindow(sc).Run().Wait()
+	gi.NewWindow(gi.NewScene(b)).Run().Wait()
 }
