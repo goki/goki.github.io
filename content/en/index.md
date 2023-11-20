@@ -19,21 +19,19 @@ title = 'GoKi'
 {{% /pageinfo %}}
 
 
-{{% blocks/section color="dark" type="row" %}}
-{{% blocks/feature icon="fa-wrench" title="Useful" url="/docs" %}}
-<feature-block title="Useful">
+<div>
+<feature-block title="Useful" icon="build">
 A large library of widgets, 3D support, a robust event system, and infinite customizability make it possible to create many useful things, from [fully-featured IDEs](/docs/gide) to [SVG drawing programs](/docs/grid).
 </feature-block>
 
-
-{{% blocks/feature icon="fa-truck-fast" title="Fast" url="/docs" %}}
+<feature-block title="Fast" icon="speed">
 GoKi is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
-{{% /blocks/feature %}}
+</feature-block>
 
-
-{{% blocks/feature icon="fa-paintbrush" title="Beautiful" url="/docs" %}}
+<feature-block title="Beautiful" icon="palette">
 Good default styles and easy, extensive customizability with a direct styling syntax and CSS support make it easy to create apps that look how you want them to.
-{{% /blocks/feature %}}
+</feature-block>
+</div>
 
 
 {{% /blocks/section %}}

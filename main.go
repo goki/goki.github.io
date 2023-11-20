@@ -12,8 +12,10 @@ import (
 	"goki.dev/gi/v2/gi"
 	"goki.dev/gi/v2/gimain"
 	"goki.dev/girl/styles"
+	"goki.dev/girl/units"
 	"goki.dev/glide/gidom"
 	"goki.dev/grr"
+	"goki.dev/icons"
 	"goki.dev/webki"
 	"golang.org/x/net/html"
 )
@@ -37,6 +39,12 @@ var elementHandlers = map[string]gidom.Handler{
 		f := gi.NewFrame(par).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
 		})
+		ic := icons.Icon(gidom.GetAttr(n, "icon"))
+		if !ic.IsNil() {
+			gi.NewIcon(f).SetIcon(ic).Style(func(s *styles.Style) {
+				s.Min.Set(units.Em(3))
+			})
+		}
 		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(n, "title"))
 		return f, true
 	},
