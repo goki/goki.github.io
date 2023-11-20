@@ -38,6 +38,14 @@ var elementHandlers = map[string]gidom.Handler{
 	"feature-block": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
 		f := gi.NewFrame(par).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
+			s.Align.Items = styles.Center
+		}).OnWidgetAdded(func(w gi.Widget) {
+			switch w := w.(type) {
+			case *gi.Label:
+				w.Style(func(s *styles.Style) {
+					s.Text.Align = styles.Center
+				})
+			}
 		})
 		ic := icons.Icon(gidom.GetAttr(n, "icon"))
 		if !ic.IsNil() {

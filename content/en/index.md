@@ -33,10 +33,6 @@ Good default styles and easy, extensive customizability with a direct styling sy
 </feature-block>
 </div>
 
-
-{{% /blocks/section %}}
-
-
 {{% blocks/section %}}
 Applications Built With GoKi
 {.h1 .text-center}
