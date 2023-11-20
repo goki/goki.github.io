@@ -9,6 +9,7 @@ import (
 	"io/fs"
 	"maps"
 
+	"goki.dev/colors"
 	"goki.dev/gi/v2/gi"
 	"goki.dev/gi/v2/gimain"
 	"goki.dev/girl/styles"
@@ -39,6 +40,7 @@ var elementHandlers = map[string]gidom.Handler{
 		f := gi.NewFrame(par).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
 			s.Align.Items = styles.Center
+			s.Grow.Set(1, 0)
 		}).OnWidgetAdded(func(w gi.Widget) {
 			switch w := w.(type) {
 			case *gi.Label:
@@ -54,6 +56,15 @@ var elementHandlers = map[string]gidom.Handler{
 			})
 		}
 		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(n, "title"))
+		return f, true
+	},
+	"page-info": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
+		f := gi.NewFrame(par).Style(func(s *styles.Style) {
+			s.BackgroundColor.SetSolid(colors.Scheme.Select.Container)
+			s.Border.Radius = styles.BorderRadiusMedium
+			s.Padding.Set(units.Dp(8))
+			s.Grow.Set(1, 0)
+		})
 		return f, true
 	},
 }
