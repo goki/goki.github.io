@@ -21,15 +21,21 @@ title = 'GoKi'
 
 <div>
 <feature-block title="Useful" icon="build">
+
 A large library of widgets, 3D support, a robust event system, and infinite customizability make it possible to create many useful things, from [fully-featured IDEs](/docs/gide) to [SVG drawing programs](/docs/grid).
+
 </feature-block>
 
 <feature-block title="Fast" icon="speed">
+
 GoKi is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
+
 </feature-block>
 
 <feature-block title="Beautiful" icon="palette">
+
 Good default styles and easy, extensive customizability with a direct styling syntax and CSS support make it easy to create apps that look how you want them to.
+
 </feature-block>
 </div>
 
