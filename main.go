@@ -33,7 +33,7 @@ func app() {
 }
 
 var elementHandlers = map[string]gidom.Handler{
-	"block-feature": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
+	"feature-block": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
 		f := gi.NewFrame(par).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
 		})
