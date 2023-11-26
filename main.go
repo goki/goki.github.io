@@ -27,18 +27,17 @@ func main() { gimain.Run(app) }
 
 func app() {
 	maps.Copy(gidom.ElementHandlers, elementHandlers)
-	b := gi.NewBody("goki")
+	gi.SetAppName("goki")
+	b := gi.NewBody()
 	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
-	grr.Log0(pg.OpenURL(""))
-	b.AddTopBar(func(pw gi.Widget) {
-		pg.TopAppBar(b.TopAppBar(pw))
-	})
+	b.AddTopAppBar(pg.TopAppBar)
+	pg.OpenURL("", true)
 	b.NewWindow().Run().Wait()
 }
 
 var elementHandlers = map[string]func(ctx gidom.Context){
 	"feature-block": func(ctx gidom.Context) {
-		f := gidom.New[*gi.Frame](ctx).Style(func(s *styles.Style) {
+		f := gi.NewFrame(ctx.BlockParent()).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
 			s.Align.Items = styles.Center
 			s.Grow.Set(1, 0)
@@ -50,6 +49,9 @@ var elementHandlers = map[string]func(ctx gidom.Context){
 				})
 			}
 		})
+		ctx.Config(f)
+		ctx.SetNewParent(f)
+
 		ic := icons.Icon(gidom.GetAttr(ctx.Node(), "icon"))
 		if !ic.IsNil() {
 			gi.NewIcon(f).SetIcon(ic).Style(func(s *styles.Style) {
@@ -57,15 +59,15 @@ var elementHandlers = map[string]func(ctx gidom.Context){
 			})
 		}
 		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(ctx.Node(), "title"))
-		ctx.SetNewParent(f)
 	},
 	"page-info": func(ctx gidom.Context) {
-		f := gidom.New[*gi.Frame](ctx).Style(func(s *styles.Style) {
+		f := gi.NewFrame(ctx.BlockParent()).Style(func(s *styles.Style) {
 			s.BackgroundColor.SetSolid(colors.Scheme.Select.Container)
 			s.Border.Radius = styles.BorderRadiusMedium
 			s.Padding.Set(units.Dp(8))
 			s.Grow.Set(1, 0)
 		})
+		ctx.Config(f)
 		ctx.SetNewParent(f)
 	},
 }
