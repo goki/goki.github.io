@@ -18,7 +18,6 @@ import (
 	"goki.dev/grr"
 	"goki.dev/icons"
 	"goki.dev/webki"
-	"golang.org/x/net/html"
 )
 
 //go:embed content/en
@@ -31,13 +30,15 @@ func app() {
 	b := gi.NewBody("goki")
 	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
 	grr.Log0(pg.OpenURL(""))
-	gi.DefaultTopAppBar = pg.TopAppBar
-	gi.NewWindow(gi.NewScene(b)).Run().Wait()
+	b.AddTopBar(func(pw gi.Widget) {
+		pg.TopAppBar(b.TopAppBar(pw))
+	})
+	b.NewWindow().Run().Wait()
 }
 
-var elementHandlers = map[string]gidom.Handler{
-	"feature-block": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
-		f := gi.NewFrame(par).Style(func(s *styles.Style) {
+var elementHandlers = map[string]func(ctx gidom.Context){
+	"feature-block": func(ctx gidom.Context) {
+		f := gidom.New[*gi.Frame](ctx).Style(func(s *styles.Style) {
 			s.Direction = styles.Column
 			s.Align.Items = styles.Center
 			s.Grow.Set(1, 0)
@@ -49,22 +50,22 @@ var elementHandlers = map[string]gidom.Handler{
 				})
 			}
 		})
-		ic := icons.Icon(gidom.GetAttr(n, "icon"))
+		ic := icons.Icon(gidom.GetAttr(ctx.Node(), "icon"))
 		if !ic.IsNil() {
 			gi.NewIcon(f).SetIcon(ic).Style(func(s *styles.Style) {
 				s.Min.Set(units.Em(3))
 			})
 		}
-		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(n, "title"))
-		return f, true
+		gi.NewLabel(f).SetType(gi.LabelHeadlineSmall).SetText(gidom.GetAttr(ctx.Node(), "title"))
+		ctx.SetNewParent(f)
 	},
-	"page-info": func(par gi.Widget, n *html.Node) (w gi.Widget, handleChildren bool) {
-		f := gi.NewFrame(par).Style(func(s *styles.Style) {
+	"page-info": func(ctx gidom.Context) {
+		f := gidom.New[*gi.Frame](ctx).Style(func(s *styles.Style) {
 			s.BackgroundColor.SetSolid(colors.Scheme.Select.Container)
 			s.Border.Radius = styles.BorderRadiusMedium
 			s.Padding.Set(units.Dp(8))
 			s.Grow.Set(1, 0)
 		})
-		return f, true
+		ctx.SetNewParent(f)
 	},
 }
