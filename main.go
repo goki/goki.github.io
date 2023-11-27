@@ -31,8 +31,9 @@ func app() {
 	b := gi.NewBody()
 	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
 	b.AddTopAppBar(pg.TopAppBar)
+	w := b.NewWindow().Run()
 	pg.OpenURL("", true)
-	b.NewWindow().Run().Wait()
+	w.Wait()
 }
 
 var elementHandlers = map[string]func(ctx gidom.Context){
