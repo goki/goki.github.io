@@ -29,10 +29,10 @@ func app() {
 	maps.Copy(gidom.ElementHandlers, elementHandlers)
 	gi.SetAppName("goki")
 	b := gi.NewBody()
-	pg := webki.NewPage(b).SetSource(grr.Log(fs.Sub(content, "content/en")))
+	pg := webki.NewPage(b).SetSource(grr.Log1(fs.Sub(content, "content/en")))
 	b.AddTopAppBar(pg.TopAppBar)
 	w := b.NewWindow().Run()
-	grr.Log0(pg.OpenURL("", true))
+	grr.Log(pg.OpenURL("", true))
 	w.Wait()
 }
 
