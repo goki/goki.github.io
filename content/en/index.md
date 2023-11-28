@@ -41,7 +41,7 @@ Good default styles and easy, extensive customizability with a direct styling sy
 
 # Applications Built With GoKi
 
-<div>
+<div style="flex-direction:row">
 <feature-block title="Gide" icon="code">
 
 An IDE and IDE framework built using Gi, with standard editor features like syntax highlighting, completion, and version control built-in.
