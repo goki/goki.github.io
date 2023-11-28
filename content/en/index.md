@@ -19,7 +19,7 @@ title = 'GoKi'
 
 </page-info>
 
-<div>
+<div style="flex-direction:row">
 <feature-block title="Useful" icon="build">
 
 A large library of widgets, 3D support, a robust event system, and infinite customizability make it possible to create many useful things, from [fully-featured IDEs](/docs/gide) to [SVG drawing programs](/docs/grid).
