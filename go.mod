@@ -8,7 +8,7 @@ require (
 	goki.dev/girl v0.0.22-0.20231118000629-18a67f9bb7d1
 	goki.dev/glop v0.1.6
 	goki.dev/goosi v0.0.12-0.20231119071855-e4c26db542ca
-	goki.dev/grr v0.0.6
+	goki.dev/grr v0.0.7
 	goki.dev/gti v0.1.16
 	goki.dev/icons v0.0.9
 	goki.dev/mat32/v2 v2.0.0-dev0.0.13
