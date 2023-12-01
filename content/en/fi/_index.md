@@ -1,5 +1,5 @@
 +++
-packages = ['goki.dev/fi']
-repo = 'https://github.com/goki/fi'
 title = 'Fi'
+repo = 'https://github.com/goki/fi'
+packages = ['goki.dev/fi']
 +++

@@ -1,5 +1,5 @@
 +++
-packages = ['goki.dev/spell']
-repo = 'https://github.com/goki/spell'
 title = 'Spell'
+repo = 'https://github.com/goki/spell'
+packages = ['goki.dev/spell']
 +++
