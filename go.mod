@@ -4,9 +4,11 @@ go 1.21.0
 
 require (
 	goki.dev/colors v0.8.29
-	goki.dev/gi/v2 v2.0.0-dev0.0.13.0.20231119071138-3242e623e948
+	goki.dev/gi/v2 v2.0.0-dev0.0.13.0.20231201064350-bc39bb67058b
 	goki.dev/girl v0.0.22-0.20231118000629-18a67f9bb7d1
+	goki.dev/glop v0.1.6
 	goki.dev/goosi v0.0.12-0.20231119071855-e4c26db542ca
+	goki.dev/grr v0.0.6
 	goki.dev/gti v0.1.16
 	goki.dev/icons v0.0.9
 	goki.dev/mat32/v2 v2.0.0-dev0.0.13
@@ -16,6 +18,7 @@ require (
 require (
 	github.com/BurntSushi/freetype-go v0.0.0-20160129220410-b763ddbfe298 // indirect
 	github.com/BurntSushi/graphics-go v0.0.0-20160129215708-b43f31a4a966 // indirect
+	github.com/BurntSushi/toml v1.3.2 // indirect
 	github.com/BurntSushi/xgb v0.0.0-20210121224620-deaf085860bc // indirect
 	github.com/BurntSushi/xgbutil v0.0.0-20190907113008-ad855c713046 // indirect
 	github.com/Masterminds/vcs v1.13.3 // indirect
@@ -48,10 +51,8 @@ require (
 	goki.dev/cam v0.9.35 // indirect
 	goki.dev/cursors v0.0.17 // indirect
 	goki.dev/enums v0.9.38 // indirect
-	goki.dev/glop v0.1.6-0.20231118061706-4995517ab57a // indirect
 	goki.dev/grog v0.0.13 // indirect
 	goki.dev/grows v0.3.15 // indirect
-	goki.dev/grr v0.0.6 // indirect
 	goki.dev/ki/v2 v2.0.0-dev0.0.19.0.20231118101925-72c32e1ceb16 // indirect
 	goki.dev/laser v0.1.18 // indirect
 	goki.dev/pi/v2 v2.0.0-dev0.0.12 // indirect
