@@ -14,9 +14,13 @@ import (
 	"goki.dev/gi/v2/gi"
 	"goki.dev/gi/v2/gimain"
 	"goki.dev/gi/v2/giv"
+	"goki.dev/gi/v2/texteditor"
 	"goki.dev/girl/states"
 	"goki.dev/girl/styles"
+	"goki.dev/girl/units"
+	"goki.dev/glop/sentence"
 	"goki.dev/goosi/events"
+	"goki.dev/grr"
 	"goki.dev/icons"
 	"goki.dev/mat32/v2"
 )
@@ -27,11 +31,11 @@ func app() {
 	gi.SetAppName("gogi-demo")
 	gi.SetAppAbout("The GoGi Demo demonstrates the various features of the GoGi 2D and 3D Go GUI framework.")
 
-	sc := gi.NewScene("gogi-demo").SetTitle("GoGi Demo")
+	b := gi.NewBody().SetTitle("GoGi Demo")
 
-	// gi.DefaultTopAppBar = nil
+	b.AddDefaultTopAppBar()
 
-	ts := gi.NewTabs(sc)
+	ts := gi.NewTabs(b)
 	ts.DeleteTabButtons = false
 
 	makeHome(ts)
@@ -41,36 +45,30 @@ func app() {
 	makeLayouts(ts)
 	makeValues(ts)
 
-	gi.NewWindow(sc).Run().Wait()
+	b.NewWindow().Run().Wait()
 }
 
-//go:embed gopher.png
-var gopherPng embed.FS
+//go:embed .goki/icons/512.png
+var giLogo embed.FS
 
 func makeHome(ts *gi.Tabs) {
 	home := ts.NewTab("Home")
-
-	gi.NewLabel(home).SetType(gi.LabelHeadlineLarge).SetText("The GoGi Demo")
-
-	gi.NewLabel(home).SetType(gi.LabelBodyLarge).SetText(`A <b>demonstration</b> of the <i>various</i> features of the <a href="https://goki.dev">GoGi</a> 2D and 3D Go GUI <u>framework.</u>`)
-
-	pbar := gi.NewProgressBar(home)
-	pbar.Start(100)
-	go func() {
-		for {
-			if pbar.ProgCur >= pbar.ProgMax {
-				pbar.Start(100)
-			}
-			time.Sleep(100 * time.Millisecond)
-			pbar.ProgStep()
-		}
-	}()
+	home.Style(func(s *styles.Style) {
+		s.Justify.Content = styles.Center
+		s.Align.Content = styles.Center
+		s.Align.Items = styles.Center
+		s.Text.Align = styles.Center
+	})
 
 	img := gi.NewImage(home)
-	err := img.OpenImageFS(gopherPng, "gopher.png", 300, 300)
-	if err != nil {
-		fmt.Println("error loading gopher image:", err)
-	}
+	grr.Log(img.OpenImageFS(giLogo, ".goki/icons/512.png"))
+	img.Style(func(s *styles.Style) {
+		s.Min.Set(units.Dp(256))
+	})
+
+	gi.NewLabel(home).SetType(gi.LabelDisplayLarge).SetText("The GoGi Demo")
+
+	gi.NewLabel(home).SetType(gi.LabelTitleLarge).SetText(`A <b>demonstration</b> of the <i>various</i> features of the <a href="https://goki.dev/gi">GoGi</a> 2D and 3D Go GUI <u>framework</u>`)
 }
 
 func makeText(ts *gi.Tabs) {
@@ -81,8 +79,8 @@ func makeText(ts *gi.Tabs) {
 		`GoGi provides fully customizable text elements that can be styled in any way you want. Also, there are pre-configured style types for text that allow you to easily create common text types.`)
 
 	for _, typ := range gi.LabelTypesValues() {
-		s := strings.TrimPrefix(typ.String(), "Label")
-		gi.NewLabel(text, "label"+s).SetType(typ).SetText(s)
+		s := sentence.Case(typ.String())
+		gi.NewLabel(text, "label"+typ.String()).SetType(typ).SetText(s)
 	}
 }
 
@@ -91,37 +89,25 @@ func makeButtons(ts *gi.Tabs) {
 
 	gi.NewLabel(buttons).SetType(gi.LabelHeadlineLarge).SetText("Buttons")
 
-	gi.NewLabel(buttons, "bdesc").SetText(
+	gi.NewLabel(buttons).SetText(
 		`GoGi provides customizable buttons that support various events and can be styled in any way you want. Also, there are pre-configured style types for buttons that allow you to achieve common functionality with ease. All buttons support any combination of a label, icon, and indicator.`)
 
-	gi.NewLabel(buttons).SetType(gi.LabelHeadlineSmall).SetText("Standard Buttons")
+	makeRow := func() gi.Widget {
+		return gi.NewLayout(buttons).Style(func(s *styles.Style) {
+			s.Wrap = true
+			s.Align.Items = styles.Center
+		})
+	}
 
-	brow := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
-	browt := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
-	browi := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
+	gi.NewLabel(buttons).SetType(gi.LabelHeadlineSmall).SetText("Standard buttons")
+	brow := makeRow()
+	browt := makeRow()
+	browi := makeRow()
 
-	gi.NewLabel(buttons).SetType(gi.LabelHeadlineSmall).SetText("Menu Buttons")
-	mbrow := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
-	mbrowt := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
-	mbrowi := gi.NewLayout(buttons).Style(func(s *styles.Style) {
-		s.Wrap = true
-		s.Align.Y = styles.AlignCenter
-	})
+	gi.NewLabel(buttons).SetType(gi.LabelHeadlineSmall).SetText("Menu buttons")
+	mbrow := makeRow()
+	mbrowt := makeRow()
+	mbrowi := makeRow()
 
 	menu := func(m *gi.Scene) {
 		m1 := gi.NewButton(m).SetText("Menu Item 1").SetIcon(icons.Save).SetShortcut("Shift+Control+1").SetData(1).
@@ -216,6 +202,8 @@ func makeInputs(ts *gi.Tabs) {
 	gi.NewTextField(inputs).SetTypePassword().SetPlaceholder("Password")
 	gi.NewTextField(inputs).SetType(gi.TextFieldOutlined).SetTypePassword().SetPlaceholder("Password")
 
+	gi.NewLabeledTextField(inputs).SetLabel("Labeled text field").SetHintText("Hint text")
+
 	spinners := gi.NewLayout(inputs, "spinners")
 
 	gi.NewSpinner(spinners).SetStep(5).SetMin(-50).SetMax(100).SetValue(15)
@@ -255,7 +243,7 @@ func makeInputs(ts *gi.Tabs) {
 	gi.NewSwitches(inputs).SetType(gi.SwitchSegmentedButton).SetMutex(true).SetItems([]string{"Segmented Button 1", "Segmented Button 2", "Segmented Button 3"}).
 		SetTooltips([]string{"A description for Segmented Button 1", "A description for Segmented Button 2", "A description for Segmented Button 3"})
 
-	gi.NewSlider(inputs).SetDim(mat32.X).SetValue(0.5).SetTracking(true)
+	gi.NewSlider(inputs).SetDim(mat32.X).SetValue(0.5)
 	gi.NewSlider(inputs).SetDim(mat32.X).SetValue(0.7).SetState(true, states.Disabled)
 
 	sliderys := gi.NewLayout(inputs, "sliderys")
@@ -263,16 +251,10 @@ func makeInputs(ts *gi.Tabs) {
 	gi.NewSlider(sliderys).SetDim(mat32.Y).SetValue(0.3)
 	gi.NewSlider(sliderys).SetDim(mat32.Y).SetValue(0.2).SetState(true, states.Disabled)
 
-	// tbuf := &giv.TextBuf{}
-	// tbuf.InitName(tbuf, "tbuf")
-	// tbuf.SetText([]byte("A keyboard-navigable, multi-line\ntext editor with support for\ncompletion and syntax highlighting"))
-
-	// tview := giv.NewTextView(inputs, "tview")
-	// tview.SetBuf(tbuf)
-	// tview.Style(func(s *styles.Style) {
-	// 	s.Max.X.SetDp(500)
-	// 	s.Max.Y.SetDp(300)
-	// })
+	tb := texteditor.NewBuf()
+	tb.NewBuf(0)
+	tb.SetText([]byte("A keyboard-navigable, multi-line\ntext editor with support for\ncompletion and syntax highlighting"))
+	texteditor.NewEditor(inputs).SetBuf(tb)
 }
 
 func makeLayouts(ts *gi.Tabs) {
@@ -300,12 +282,12 @@ func makeLayouts(ts *gi.Tabs) {
 	sv := gi.NewSplits(layouts).SetDim(mat32.X)
 
 	left := gi.NewFrame(sv).Style(func(s *styles.Style) {
-		s.SetMainAxis(mat32.Y)
+		s.Direction = styles.Column
 		s.BackgroundColor.SetSolid(colors.Scheme.SurfaceContainerLow)
 	})
 	gi.NewLabel(left).SetType(gi.LabelHeadlineMedium).SetText("Left")
 	right := gi.NewFrame(sv).Style(func(s *styles.Style) {
-		s.SetMainAxis(mat32.Y)
+		s.Direction = styles.Column
 		s.BackgroundColor.SetSolid(colors.Scheme.SurfaceContainerLow)
 	})
 	gi.NewLabel(right).SetType(gi.LabelHeadlineMedium).SetText("Right")
@@ -323,9 +305,10 @@ func makeValues(ts *gi.Tabs) {
 		giv.InspectorDialog(ts.Sc)
 	})
 
-	giv.NewValue(values, colors.Red)
+	giv.NewValue(values, colors.Orange)
 	giv.NewValue(values, time.Now())
 	giv.NewValue(values, gi.FileName("demo.go"))
+	giv.NewValue(values, giv.ColorMapName(""))
 	giv.NewValue(values, hello)
 }
 
@@ -340,78 +323,3 @@ func hello(firstName string, lastName string, age int, likesGo bool) (greeting s
 	}
 	return
 }
-
-// func doRenderWinSetup(win *gi.RenderWin, vp *gi.Scene) {
-// 	// Main Menu
-
-// 	appnm := gi.AppName()
-// 	mmen := win.MainMenu
-// 	mmen.ConfigMenus([]string{appnm, "File", "Edit", "RenderWin"})
-
-// 	amen := win.MainMenu.ChildByName(appnm, 0).(*gi.Button)
-// 	amen.Menu.AddAppMenu(win)
-
-// 	fmen := win.MainMenu.ChildByName("File", 0).(*gi.Button)
-// 	fmen.Menu.AddAction(gi.ActOpts{Label: "New", ShortcutKey: keyfun.MenuNew},
-// 		fmen.This(), func(recv, send ki.Ki, sig int64, data any) {
-// 			fmt.Println("File:New menu action triggered")
-// 		})
-// 	fmen.Menu.AddAction(gi.ActOpts{Label: "Open", ShortcutKey: keyfun.MenuOpen},
-// 		fmen.This(), func(recv, send ki.Ki, sig int64, data any) {
-// 			fmt.Println("File:Open menu action triggered")
-// 		})
-// 	fmen.Menu.AddAction(gi.ActOpts{Label: "Save", ShortcutKey: keyfun.MenuSave},
-// 		fmen.This(), func(recv, send ki.Ki, sig int64, data any) {
-// 			fmt.Println("File:Save menu action triggered")
-// 		})
-// 	fmen.Menu.AddAction(gi.ActOpts{Label: "Save As..", ShortcutKey: keyfun.MenuSaveAs},
-// 		fmen.This(), func(recv, send ki.Ki, sig int64, data any) {
-// 			fmt.Println("File:SaveAs menu action triggered")
-// 		})
-// 	fmen.Menu.AddSeparator("csep")
-// 	fmen.Menu.AddAction(gi.ActOpts{Label: "Close RenderWin", ShortcutKey: keyfun.WinClose},
-// 		win.This(), func(recv, send ki.Ki, sig int64, data any) {
-// 			win.CloseReq()
-// 		})
-// 	inQuitPrompt := false
-// 	gi.SetQuitReqFunc(func() {
-// 		if inQuitPrompt {
-// 			return
-// 		}
-// 		inQuitPrompt = true
-// 		gi.PromptDialog(vp, gi.DlgOpts{Title: "Really Quit?",
-// 			Prompt: "Are you <i>sure</i> you want to quit?", Ok: true, Cancel: true}, func(dlg *gi.Dialog) {
-// 			if dlg.Accepted {
-// 				gi.Quit()
-// 			} else {
-// 				inQuitPrompt = false
-// 			}
-// 		})
-// 	})
-
-// 	gi.SetQuitCleanFunc(func() {
-// 		fmt.Printf("Doing final Quit cleanup here..\n")
-// 	})
-
-// 	inClosePrompt := false
-// 	win.SetCloseReqFunc(func(w *gi.RenderWin) {
-// 		if inClosePrompt {
-// 			return
-// 		}
-// 		inClosePrompt = true
-// 		gi.PromptDialog(vp, gi.DlgOpts{Title: "Really Close RenderWin?",
-// 			Prompt: "Are you <i>sure</i> you want to close the window?  This will Quit the App as well.", Ok: true, Cancel: true}, func(dlg *gi.Dialog) {
-// 			if dlg.Accepted {
-// 				gi.Quit()
-// 			} else {
-// 				inClosePrompt = false
-// 			}
-// 		})
-// 	})
-
-// 	// win.SetCloseCleanFunc(func(w *gi.RenderWin) {
-// 	// 	fmt.Printf("Doing final Close cleanup here..\n")
-// 	// })
-
-// 	win.MainMenuUpdated()
-// }
