@@ -1,6 +1,6 @@
 module goki.dev/goki.github.io
 
-go 1.21.0
+go 1.21
 
 require (
 	goki.dev/colors v0.8.35
