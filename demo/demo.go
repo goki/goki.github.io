@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The GoKi Authors. All rights reserved.
+// Copyright (c) 2023, The GoKi Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -233,8 +233,24 @@ func makeInputs(ts *gi.Tabs) {
 	gi.NewSwitches(inputs).SetType(gi.SwitchCheckbox).SetItems([]string{"Checkbox 1", "Checkbox 2", "Checkbox 3"}).
 		SetTooltips([]string{"A description for Checkbox 1", "A description for Checkbox 2", "A description for Checkbox 3"})
 
+	is := gi.NewSwitches(inputs).SetType(gi.SwitchCheckbox).SetItems([]string{"Indeterminate 1", "Indeterminate 2", "Indeterminate 3"}).
+		SetTooltips([]string{"A description for Checkbox 1", "A description for Checkbox 2", "A description for Checkbox 3"})
+	is.Config()
+	for _, swi := range is.Kids {
+		sw := swi.(*gi.Switch)
+		sw.SetState(true, states.Indeterminate)
+	}
+
 	gi.NewSwitches(inputs).SetType(gi.SwitchRadioButton).SetMutex(true).SetItems([]string{"Radio Button 1", "Radio Button 2", "Radio Button 3"}).
 		SetTooltips([]string{"A description for Radio Button 1", "A description for Radio Button 2", "A description for Radio Button 3"})
+
+	is = gi.NewSwitches(inputs).SetType(gi.SwitchRadioButton).SetItems([]string{"Indeterminate 1", "Indeterminate 2", "Indeterminate 3"}).
+		SetTooltips([]string{"A description for Radio Button 1", "A description for Radio Button 2", "A description for Radio Button 3"})
+	is.Config()
+	for _, swi := range is.Kids {
+		sw := swi.(*gi.Switch)
+		sw.SetState(true, states.Indeterminate)
+	}
 
 	gi.NewSwitches(inputs).SetType(gi.SwitchSegmentedButton).SetMutex(true).SetItems([]string{"Segmented Button 1", "Segmented Button 2", "Segmented Button 3"}).
 		SetTooltips([]string{"A description for Segmented Button 1", "A description for Segmented Button 2", "A description for Segmented Button 3"})
@@ -279,12 +295,12 @@ func makeLayouts(ts *gi.Tabs) {
 
 	left := gi.NewFrame(sv).Style(func(s *styles.Style) {
 		s.Direction = styles.Column
-		s.BackgroundColor.SetSolid(colors.Scheme.SurfaceContainerLow)
+		s.Background = colors.C(colors.Scheme.SurfaceContainerLow)
 	})
 	gi.NewLabel(left).SetType(gi.LabelHeadlineMedium).SetText("Left")
 	right := gi.NewFrame(sv).Style(func(s *styles.Style) {
 		s.Direction = styles.Column
-		s.BackgroundColor.SetSolid(colors.Scheme.SurfaceContainerLow)
+		s.Background = colors.C(colors.Scheme.SurfaceContainerLow)
 	})
 	gi.NewLabel(right).SetType(gi.LabelHeadlineMedium).SetText("Right")
 }
@@ -304,7 +320,7 @@ func makeValues(ts *gi.Tabs) {
 	giv.NewValue(values, colors.Orange)
 	giv.NewValue(values, time.Now())
 	giv.NewValue(values, gi.FileName("demo.go"))
-	giv.NewValue(values, giv.ColorMapName(""))
+	giv.NewValue(values, giv.ColorMapName("ColdHot"))
 	giv.NewValue(values, hello)
 }
 
