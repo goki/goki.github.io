@@ -1,13 +1,13 @@
 +++
 linkTitle = 'About'
-title = 'About GoKi'
+title = 'About Goki'
 
 [menu]
   [menu.main]
     weight = 10
 +++
 
-{{% blocks/cover title="About GoKi" image_anchor="bottom" height="auto" %}}
+{{% blocks/cover title="About Goki" image_anchor="bottom" height="auto" %}}
 
 A framework for trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI framework.
 {.mt-5}
@@ -16,13 +16,13 @@ A framework for trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI fra
 
 {{% blocks/lead %}}
 
-GoKi is an open-source project that provides a set of frameworks for constructing cross-platform GUIs and other useful tools in pure Go using full-strength tree structures. The name GoKi is derived from the word tree in Japanese (木), which is pronounced Ki (き). 
+Goki is an open-source project that provides a set of frameworks for constructing cross-platform GUIs and other useful tools in pure Go using full-strength tree structures. The name Goki is derived from the word tree in Japanese (木), which is pronounced Ki (き). 
 
 {{% /blocks/lead %}}
 
 {{% blocks/section %}}
 
-### The core package of GoKi is Ki, which provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.
+### The core package of Goki is Ki, which provides trees using the `Ki` interface implemented by the `Node` struct. This supports arbitrarily directed structural trees and standard operations on them.
 {.text-center}
 
 {{% /blocks/section %}}

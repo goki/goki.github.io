@@ -4,7 +4,7 @@
   "description": "A framework for trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI framework.",
   "repository": "github:goki/goki.github.io",
   "homepage": "https://goki.dev",
-  "author": "GoKi Authors",
+  "author": "Goki Authors",
   "license": "Apache-2.0",
   "bugs": "https://github.com/goki/goki.github.io/issues",
   "spelling": "cSpell:ignore HTMLTEST precheck postbuild -",

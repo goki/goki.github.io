@@ -17,7 +17,7 @@ description = 'A free and open source framework for building useful, fast, and b
 {{< /blocks/cover >}}
 
 {{% pageinfo %}}
-**NOTE:** GoKi is currently undergoing a period of significant developement to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [GoKi GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of GoKi, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Developement of Gi is currently happening on the [mobile branch](https://github.com/goki/gi/tree/mobile).
+**NOTE:** Goki is currently undergoing a period of significant developement to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [Goki GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of Goki, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Developement of Gi is currently happening on the [mobile branch](https://github.com/goki/gi/tree/mobile).
 
 {{% /pageinfo %}}
 
@@ -29,7 +29,7 @@ A large library of widgets, 3D support, a robust event system, and infinite cust
 
 
 {{% blocks/feature icon="fa-truck-fast" title="Fast" url="/docs" %}}
-GoKi is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
+Goki is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
 {{% /blocks/feature %}}
 
 
@@ -42,7 +42,7 @@ Good default styles and easy, extensive customizability with a direct styling sy
 
 
 {{% blocks/section %}}
-Applications Built With GoKi
+Applications Built With Goki
 {.h1 .text-center}
 {{% /blocks/section %}}
 

@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "GoKi"
+title = "Goki"
 
 # Language settings
 contentDir = "content/en"
@@ -65,8 +65,8 @@ enableGitInfo = true
     # Weight used for sorting.
     weight = 1
     [languages.en.params]
-      title = "GoKi"
-      description = "GoKi framework for Trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI framework."
+      title = "Goki"
+      description = "Goki framework for Trees (Ki in Japanese) in Go, including the GoGi 2D & 3D GUI framework."
 
 [markup]
   [markup.goldmark]
@@ -87,7 +87,7 @@ enableGitInfo = true
   section = ["HTML", "print", "RSS"]
 
 [params]
-  copyright = "The GoKi Authors"
+  copyright = "The Goki Authors"
   # privacy_policy = "https://policies.google.com/privacy"
 
   # First one is picked as the Twitter card image if not set on page.
@@ -169,7 +169,7 @@ enableGitInfo = true
 [params.links]
   # End user relevant links. These will show up on left side of footer and in the community page if you have one.
   [[params.links.user]]
-    name = "GoKi Mailing List"
+    name = "Goki Mailing List"
     url = "https://groups.google.com/g/goki-gi"
     icon = "fa fa-envelope"
     desc = "Discussion and help from the developers and your fellow users"

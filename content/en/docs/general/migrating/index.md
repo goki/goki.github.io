@@ -6,7 +6,7 @@ weight = 1
 
 ## Breaking Changes
 
-### GoKi-wide
+### Goki-wide
 * Import paths have been changed from `github.com/goki/*` to `goki.dev/*` (for example, `github.com/goki/gi` changed to `goki.dev/gi`). All repositories with a changed import URL that were on version 1 are now on version 2 and have a major version URL suffix (for example, `goki.dev/gi/v2`) 
 * `KiT_*` global variables have been renamed to `Type*` (for example, `KiT_Button` changed to `TypeButton`); fixing this should be a simple find and replace for `KiT_` => `Type`
 * `AddNew*` functions and methods have been renamed to `New*` (for example, `AddNewButton` changed to `NewButton`); fixing this should be a simple find a replace for `AddNew` => `New`
