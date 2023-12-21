@@ -1,5 +1,5 @@
 +++
-title = 'GoKi'
+title = 'Goki'
 +++
 
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
@@ -14,7 +14,7 @@ title = 'GoKi'
 {{< /blocks/cover >}}
 
 {{% pageinfo %}}
-**NOTE:** GoKi is currently undergoing a period of significant development to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [GoKi GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of GoKi, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Development of Gi is currently happening on the [main branch](https://github.com/goki/gi/tree/main). For the latest stable version of Gi, import version 1.3.19 and see the [v1 branch](https://github.com/goki/gi/tree/v1).
+**NOTE:** Goki is currently undergoing a period of significant development to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [Goki GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of Goki, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Development of Gi is currently happening on the [main branch](https://github.com/goki/gi/tree/main). For the latest stable version of Gi, import version 1.3.19 and see the [v1 branch](https://github.com/goki/gi/tree/v1).
 
 
 {{% /pageinfo %}}
@@ -27,7 +27,7 @@ A large library of widgets, 3D support, a robust event system, and infinite cust
 
 
 {{% blocks/feature icon="fa-truck-fast" title="Fast" url="/docs" %}}
-GoKi is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
+Goki is built on the cutting-edge [Vulkan graphics framework](https://en.wikipedia.org/wiki/Vulkan), making it possible to create lightning-fast 3D games and editors. 
 {{% /blocks/feature %}}
 
 
@@ -40,7 +40,7 @@ Good default styles and easy, extensive customizability with a direct styling sy
 
 
 {{% blocks/section %}}
-Applications Built With GoKi
+Applications Built With Goki
 {.h1 .text-center}
 {{% /blocks/section %}}
 
