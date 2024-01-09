@@ -46,7 +46,7 @@ jobs:
         run: go install -tags offscreen goki.dev/goki@main
 
       - name: Build Demo
-        run: goki build ./demo -o static/demo -t js
+        run: cd demo && goki build -t js && cp -a .goki/bin/js ../static/demo && cd ..
 
       - name: Install Hugo CLI
         run: |
