@@ -1,5 +1,7 @@
 +++
 title = 'Goki'
+repo = 'https://github.com/goki/goki'
+packages = ['goki.dev']
 +++
 
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
