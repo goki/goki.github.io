@@ -43,10 +43,10 @@ jobs:
           go-version: '1.21.3'
 
       - name: Install Goki
-        run: go install -tags offscreen goki.dev/goki/gokitool@main
+        run: go install goki.dev/goki@main
 
       - name: Build Demo
-        run: cd demo && gokitool build -t js && cp -a .goki/bin/js ../static/demo && cd ..
+        run: cd demo && goki build -t js && cp -a .goki/bin/js ../static/demo && cd ..
 
       - name: Install Hugo CLI
         run: |
