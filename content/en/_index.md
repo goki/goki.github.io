@@ -4,6 +4,14 @@ repo = 'https://github.com/goki/goki'
 packages = ['goki.dev']
 +++
 
+
+{{% pageinfo %}}
+# IMPORTANT:
+Development of Goki has moved to [Cogent Core](https://github.com/cogentcore). This website and the [Goki GitHub organization](https://github.com/goki) contain v1 versions for backward compatibility.
+
+{{% /pageinfo %}}
+
+
 {{< blocks/cover title="Insert the Ki to Accelerate Your Go Experience" image_anchor="top" height="80%" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/demo">
   Run Demo <i class="fas fa-play ms-2 "></i>
@@ -14,13 +22,6 @@ packages = ['goki.dev']
 <p class="lead mt-5">A free and open source framework for building useful, fast, and beautiful 2D and 3D GUIs that run on macOS, Windows, Linux, iOS, and Android with a single pure Go codebase.</p>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
-
-{{% pageinfo %}}
-**NOTE:** Goki is currently undergoing a period of significant development to make it easier to make useful, fast, and beautiful apps and support running apps on mobile. As such, some of the information on this website and in the [Goki GitHub repositories](https://github.com/goki) may be incorrect. Furthermore, there may be breaking changes soon, so starting new apps with this framework is not recommended at this time; if you do, please be ready to adjust to any breaking changes. If you want to accelerate the improvement of Goki, please contribute by following the [Contribution Guidelines](https://goki.dev/docs/general/contributionguidelines/). Development of Gi is currently happening on the [main branch](https://github.com/goki/gi/tree/main). For the latest stable version of Gi, import version 1.3.19 and see the [v1 branch](https://github.com/goki/gi/tree/v1).
-
-
-{{% /pageinfo %}}
-
 
 {{% blocks/section color="dark" type="row" %}}
 {{% blocks/feature icon="fa-wrench" title="Useful" url="/docs" %}}
